@@ -1,22 +1,22 @@
 export const thumbnailOptions = [
   {
-    href: '/fabric',
-    title: 'FABRIC™',
-    image: 'Dennis-Portfolio/images/hlz36eeb3ddfvqt9tex9',
+    href: '/project-1',
+    title: 'PROJECT ONE',
+    image: '/images/project-1.svg',
   },
   {
-    href: '/aanstekelijk',
-    title: 'Aanstekelijk',
-    image: 'Dennis-Portfolio/images/aigt2q3xiqb8ovujzscc',
+    href: '/project-2',
+    title: 'PROJECT TWO',
+    image: '/images/project-2.svg',
   },
   {
-    href: '/base-create',
-    title: 'Base Create',
-    image: 'Dennis-Portfolio/images/ahuzarh793qmv9sdveyk',
+    href: '/project-3',
+    title: 'PROJECT THREE',
+    image: '/images/project-3.svg',
   },
   {
-    href: '/avvr',
-    title: 'AVVR',
-    image: 'Dennis-Portfolio/images/pzychyr1ans60gqlevhg',
+    href: '/project-4',
+    title: 'PROJECT FOUR',
+    image: '/images/project-4.svg',
   },
 ];

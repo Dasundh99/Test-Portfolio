@@ -3,9 +3,9 @@ import { Transition } from '@/layout';
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Work',
+  title: 'Work | Your Portfolio',
   description:
-    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
+    'This is a placeholder description for my portfolio. Replace this with your own professional summary.',
 };
 
 export default function Work() {

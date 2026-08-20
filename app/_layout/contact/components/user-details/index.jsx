@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { ArrowDownLeft } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { CldImage } from 'next-cloudinary';
 
 import { MagneticButton } from '@/components';
 
@@ -19,11 +19,11 @@ export function UserDetails({ transformX }) {
       <Row>
         <div className='flex items-center gap-8'>
           <ImageWrapper>
-            <CldImage
-              src='Dennis-Portfolio/images/mqtwxh5znybowgaljrbp'
+            <Image
+              src='/images/ionela-mat-wh6ZDpz65cI-unsplash.jpg'
+              alt='Profile'
+              fill
               className='rounded-full object-cover'
-              fill={true}
-              alt='Dennis Snellenberg Profile Picture'
             />
           </ImageWrapper>
           <MainTitle>Let’s work</MainTitle>
@@ -38,7 +38,7 @@ export function UserDetails({ transformX }) {
 
       <Row>
         <div className='relative w-full'>
-          <div className='h-[1px] bg-muted-foreground' />
+          <div className='h-px bg-muted-foreground' />
           <div className='absolute right-0 top-0 z-20 -translate-x-1/2 -translate-y-1/2'>
             <motion.div style={{ x: transformX }}>
               <Link href='/contact' passHref>
@@ -54,24 +54,24 @@ export function UserDetails({ transformX }) {
       <Row>
         <div className='flex w-full flex-col gap-4 lg:flex-row'>
           <div>
-            <a href='mailto:info@dennissnellenberg.com'>
+            <a href='mailto:your@email.com'>
               <MagneticButton
                 variant='outline'
                 size='md'
                 className='w-full border-muted-foreground'
               >
-                info@dennissnellenberg.com
+                your@email.com
               </MagneticButton>
             </a>
           </div>
           <div>
-            <a href='tel:+31627847430'>
+            <a href='tel:+1234567890'>
               <MagneticButton
                 variant='outline'
                 size='md'
                 className='w-full border-muted-foreground'
               >
-                +31 6 27 84 74 30
+                +1 234 567 890
               </MagneticButton>
             </a>
           </div>

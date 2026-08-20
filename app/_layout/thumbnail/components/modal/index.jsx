@@ -1,9 +1,8 @@
-'use client';
+﻿'use client';
 
 import { forwardRef } from 'react';
 
 import { motion } from 'framer-motion';
-import { CldImage } from 'next-cloudinary';
 
 import { Center } from '@/components';
 import { thumbnailOptions } from '@/data';
@@ -20,12 +19,13 @@ export const ThumbnailModal = forwardRef(
     const items = thumbnailOptions.map(({ title, image }) => {
       const id = randomId();
       return (
-        <Center key={id} className='h-full w-full'>
-          <CldImage
+        <Center key={id} className='size-full'>
+          <img
             src={image}
             width={320}
             height={320}
             alt={`${title} thumbnail image`}
+            className='size-full object-cover'
           />
         </Center>
       );
@@ -34,14 +34,14 @@ export const ThumbnailModal = forwardRef(
     return (
       <MotionComponent
         ref={ref}
-        className='pointer-events-none fixed left-1/2 top-1/2 h-80 w-80 overflow-hidden rounded bg-secondary-foreground'
+        className='pointer-events-none fixed left-1/2 top-1/2 size-80 overflow-hidden rounded bg-secondary-foreground'
         variants={variants}
         initial='initial'
         animate={active ? 'enter' : 'closed'}
         {...props}
       >
         <div
-          className='relative h-full w-full'
+          className='relative size-full'
           style={{
             top: `${index * -100}%`,
             transition: 'top 0.5s cubic-bezier(0.76, 0, 0.24, 1)',
