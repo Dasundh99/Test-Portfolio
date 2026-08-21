@@ -31,11 +31,55 @@ const publications = [
 export function Publications() {
   return (
     <article className='container relative py-12 md:py-16 lg:py-20'>
-      <div className='grid grid-cols-1 gap-0 lg:grid-cols-[60%_40%]'>
+      <div className='grid grid-cols-1 gap-0 lg:grid-cols-[50%_50%]'>
         {/* =====================================================
-            LEFT — 60%
+            LEFT — 60% — IMAGE
         ===================================================== */}
-        <div className='border-black/10 lg:border-r lg:pr-10 xl:pr-14'>
+        <div className='lg:pr-10 xl:pr-14'>
+          <ParallaxFade>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.7,
+                ease: 'easeOut',
+              }}
+              className='
+                relative
+                min-h-[420px]
+                w-full
+                overflow-hidden
+                bg-black/5
+                md:min-h-[560px]
+                lg:h-full
+                lg:min-h-[680px]
+              '
+            >
+              <img
+                src='/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg'
+                alt='Publication research'
+                className='
+                  absolute
+                  inset-0
+                  size-full
+                  object-cover
+                  transition-transform
+                  duration-700
+                  hover:scale-105
+                '
+              />
+
+              {/* Subtle overlay */}
+              <div className='absolute inset-0 bg-black/5' />
+            </motion.div>
+          </ParallaxFade>
+        </div>
+
+        {/* =====================================================
+            RIGHT — 40% — PUBLICATIONS
+        ===================================================== */}
+        <div className='mt-10 lg:mt-0 lg:border-l lg:border-black/10 lg:pl-10 xl:pl-14'>
           {/* Main Title */}
           <ParallaxFade>
             <h2
@@ -74,7 +118,15 @@ export function Publications() {
               >
                 {/* Small Title */}
                 <div className='mb-5 flex items-start gap-4'>
-                  <span className='pt-0.5 text-[10px] font-medium tracking-[0.2em] text-black/40'>
+                  <span
+                    className='
+                      pt-0.5
+                      text-[10px]
+                      font-medium
+                      tracking-[0.2em]
+                      text-black/40
+                    '
+                  >
                     0{index + 1}
                   </span>
 
@@ -133,50 +185,6 @@ export function Publications() {
               </motion.section>
             ))}
           </div>
-        </div>
-
-        {/* =====================================================
-            RIGHT — 40%
-        ===================================================== */}
-        <div className='mt-10 lg:mt-0 lg:pl-10 xl:pl-14'>
-          <ParallaxFade>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{
-                duration: 0.7,
-                ease: 'easeOut',
-              }}
-              className='
-                relative
-                min-h-[420px]
-                w-full
-                overflow-hidden
-                bg-black/5
-                md:min-h-[560px]
-                lg:h-full
-                lg:min-h-[680px]
-              '
-            >
-              <img
-                src='/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg'
-                alt='Publication research'
-                className='
-                  absolute
-                  inset-0
-                  size-full
-                  object-cover
-                  transition-transform
-                  duration-700
-                  hover:scale-105
-                '
-              />
-
-              {/* Subtle overlay */}
-              <div className='absolute inset-0 bg-black/5' />
-            </motion.div>
-          </ParallaxFade>
         </div>
       </div>
     </article>
