@@ -2,6 +2,7 @@ import {
   Contact,
   Description,
   Header,
+  Journey,
   Navbar,
   Project,
   Thumbnail,
@@ -22,6 +23,7 @@ export default function Home() {
       <Header />
       <main>
         <Description />
+        <Journey />
         <Thumbnail />
         <Project />
       </main>
