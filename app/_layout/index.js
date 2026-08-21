@@ -12,3 +12,5 @@ export * from './research';
 export * from './publications';
 export * from './teaching';
 export * from './beyondClassRoom';
+export * from './designProjects';
+export * from './designProjectsTwo';

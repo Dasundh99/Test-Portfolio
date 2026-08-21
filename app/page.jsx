@@ -2,6 +2,8 @@ import {
   BeyondClassRoom,
   Contact,
   Description,
+  DesignProjects,
+  DesignProjectsTwo,
   Header,
   Journey,
   Learned,
@@ -33,6 +35,8 @@ export default function Home() {
         <Publications />
         <Teaching />
         <BeyondClassRoom />
+        <DesignProjects />
+        <DesignProjectsTwo />
         <Project />
       </main>
       <Contact />

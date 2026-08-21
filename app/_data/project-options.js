@@ -2,37 +2,37 @@ export const projectOptions = {
   first: [
     {
       type: 'image',
-      source: '/images/gio-gix-GVpYBWGayjw-unsplash.jpg',
+      source: '/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg',
     },
     {
       type: 'image',
-      source: '/images/gio-gix-GVpYBWGayjw-unsplash.jpg',
+      source: '/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg',
     },
     {
       type: 'image',
-      source: '/images/gio-gix-GVpYBWGayjw-unsplash.jpg',
+      source: '/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg',
     },
     {
       type: 'image',
-      source: '/images/gio-gix-GVpYBWGayjw-unsplash.jpg',
+      source: '/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg',
     },
   ],
   second: [
     {
       type: 'image',
-      source: '/images/gio-gix-GVpYBWGayjw-unsplash.jpg',
+      source: '/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg',
     },
     {
       type: 'image',
-      source: '/images/gio-gix-GVpYBWGayjw-unsplash.jpg',
+      source: '/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg',
     },
     {
       type: 'image',
-      source: '/images/gio-gix-GVpYBWGayjw-unsplash.jpg',
+      source: '/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg',
     },
     {
       type: 'image',
-      source: '/images/gio-gix-GVpYBWGayjw-unsplash.jpg',
+      source: '/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg',
     },
   ],
 };

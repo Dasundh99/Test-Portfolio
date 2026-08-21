@@ -46,18 +46,7 @@ export function Research() {
         <div className='lg:pr-8'>
           <div className='lg:sticky lg:top-24'>
             <ParallaxFade>
-              <h2
-                className='
-                  text-4xl
-                  font-black
-                  uppercase
-                  leading-none
-                  tracking-tight
-                  text-white
-                  md:text-5xl
-                  lg:text-[3.5vw]
-                '
-              >
+              <h2 className='text-[4vw] font-black uppercase leading-[1.05] tracking-tight text-white md:text-[4vw]'>
                 <ParallaxReveal paragraph='Research' />
               </h2>
             </ParallaxFade>

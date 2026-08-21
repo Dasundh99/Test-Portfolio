@@ -71,7 +71,7 @@ export function Learned() {
               </span>
             </ParallaxFade>
 
-            <h2 className='max-w-xl text-[8vw] font-black uppercase leading-[0.9] tracking-[-0.055em] sm:text-[6vw] lg:text-[4.5vw]'>
+            <h2 className='text-[4vw] font-black uppercase leading-[1.05] tracking-tight text-black md:text-[4vw]'>
               <ParallaxReveal paragraph={phrase} />
             </h2>
           </div>

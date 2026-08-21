@@ -1,47 +1,80 @@
 'use client';
 
 import Link from 'next/link';
+import {
+  FaBehance,
+  FaDribbble,
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+  FaYoutube,
+} from 'react-icons/fa6';
 
 import { MagneticButton } from '@/components';
 import { socialMedias } from '@/data';
-import { randomId } from '@/utils';
 
 import { ListTitle } from './index.styled';
 
-export function SocialInfo() {
-  const medias = socialMedias.map(({ href, title }) => {
-    const id = randomId();
-    return (
-      <li
-        key={id}
-        className='border-b border-solid border-b-transparent transition-all duration-300 ease-in-expo hover:border-b-border'
-      >
-        <Link href={href} target='_blank' rel='noopener' passHref>
-          <MagneticButton>{title}</MagneticButton>
-        </Link>
-      </li>
-    );
-  });
+const socialIcons = {
+  GitHub: FaGithub,
+  Instagram: FaInstagram,
+  LinkedIn: FaLinkedinIn,
+  Facebook: FaFacebookF,
+  YouTube: FaYoutube,
+  Behance: FaBehance,
+  Dribbble: FaDribbble,
+  Twitter: FaXTwitter,
+  X: FaXTwitter,
+};
 
+export function SocialInfo() {
   return (
-    <div className='px-12 pb-4 pt-10'>
-      <div className='flex flex-wrap items-stretch justify-between gap-5'>
-        <div className='flex gap-8'>
-          <div>
-            <ListTitle>Version</ListTitle>
-            <p className='mt-7'>2022 © Edition</p>
-          </div>
-          <div>
-            <ListTitle>Local time</ListTitle>
-            <p className='mt-7'>
-              <time>04:01 PM GMT+2</time>
-            </p>
-          </div>
+    <div className='relative z-10 w-full px-8 pb-8 pt-0 md:px-12'>
+      <div className='flex w-full items-start justify-between gap-10'>
+        {/* Version */}
+        <div className='shrink-0'>
+          <ListTitle>Version</ListTitle>
+
+          <p className='mt-3 text-sm'>{new Date().getFullYear()} © Edition</p>
         </div>
 
-        <div className='flex flex-col'>
+        {/* Socials */}
+        <div className='min-w-0 flex-1'>
           <ListTitle>Socials</ListTitle>
-          <ul className='flex gap-8'>{medias}</ul>
+
+          <ul className='mt-3 flex flex-wrap gap-x-6 gap-y-2'>
+            {socialMedias.map(({ href, title }) => {
+              const Icon = socialIcons[title];
+
+              return (
+                <li key={href} className='group'>
+                  <Link
+                    href={href}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label={title}
+                    className='inline-flex items-center'
+                  >
+                    <MagneticButton>
+                      <span className='flex items-center gap-2 whitespace-nowrap'>
+                        {Icon && (
+                          <Icon
+                            size={17}
+                            strokeWidth={2}
+                            className='shrink-0 transition-transform duration-300 group-hover:scale-110'
+                          />
+                        )}
+
+                        <span>{title}</span>
+                      </span>
+                    </MagneticButton>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </div>

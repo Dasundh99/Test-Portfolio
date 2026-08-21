@@ -82,18 +82,7 @@ export function Publications() {
         <div className='mt-10 lg:mt-0 lg:border-l lg:border-black/10 lg:pl-10 xl:pl-14'>
           {/* Main Title */}
           <ParallaxFade>
-            <h2
-              className='
-                text-4xl
-                font-black
-                uppercase
-                leading-none
-                tracking-tight
-                text-black
-                md:text-5xl
-                lg:text-[5vw]
-              '
-            >
+            <h2 className='text-[4vw] font-black uppercase leading-[1.05] tracking-tight text-black md:text-[4vw]'>
               <ParallaxReveal paragraph='Publications' />
             </h2>
           </ParallaxFade>

@@ -81,19 +81,7 @@ export function Teaching() {
           <div className='lg:pr-8 xl:pr-12'>
             {/* Main Title */}
             <ParallaxFade>
-              <h2
-                className='
-                  max-w-md
-                  text-4xl
-                  font-black
-                  uppercase
-                  leading-[0.92]
-                  tracking-tight
-                  text-white
-                  md:text-5xl
-                  lg:text-[4vw]
-                '
-              >
+              <h2 className='text-[4vw] font-black uppercase leading-[1.05] tracking-tight text-white md:text-[4vw]'>
                 <ParallaxReveal paragraph='Teaching Is Where I Grow Alongside Others' />
               </h2>
             </ParallaxFade>

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 import { useContactSlider } from '@/hooks';
 
-import { SocialInfo, UserDetails } from './components';
+import { UserDetails } from './components';
 
 export function Contact() {
   /** @type {import('react').MutableRefObject<HTMLElement>} */
@@ -19,9 +19,8 @@ export function Contact() {
       className='relative max-h-screen bg-foreground text-background'
       style={{ y: transformY }}
     >
-      <div style={{ paddingBlock: 'clamp(5em, 21vh, 12em)' }}>
+      <div style={{ paddingBlock: 'clamp(5em, 5vh, 5em)' }}>
         <UserDetails transformX={transformX} />
-        <SocialInfo />
       </div>
     </motion.footer>
   );
