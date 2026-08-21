@@ -8,3 +8,7 @@ export * from './thumbnail';
 export * from './transition';
 export * from './journey';
 export * from './description';
+export * from './research';
+export * from './publications';
+export * from './teaching';
+export * from './beyondClassRoom';

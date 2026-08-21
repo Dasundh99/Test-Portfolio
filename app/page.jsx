@@ -1,4 +1,5 @@
 import {
+  BeyondClassRoom,
   Contact,
   Description,
   Header,
@@ -6,7 +7,9 @@ import {
   Learned,
   Navbar,
   Project,
-  Thumbnail,
+  Publications,
+  Research,
+  Teaching,
   Transition,
 } from '@/layout';
 
@@ -26,7 +29,10 @@ export default function Home() {
         <Description />
         <Journey />
         <Learned />
-        <Thumbnail />
+        <Research />
+        <Publications />
+        <Teaching />
+        <BeyondClassRoom />
         <Project />
       </main>
       <Contact />
