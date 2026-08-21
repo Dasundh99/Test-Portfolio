@@ -3,6 +3,7 @@ import {
   Description,
   Header,
   Journey,
+  Learned,
   Navbar,
   Project,
   Thumbnail,
@@ -24,6 +25,7 @@ export default function Home() {
       <main>
         <Description />
         <Journey />
+        <Learned />
         <Thumbnail />
         <Project />
       </main>

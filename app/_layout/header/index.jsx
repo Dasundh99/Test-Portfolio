@@ -34,7 +34,7 @@ export function Header() {
       </div>
 
       {/* Decorative border */}
-      <div className='pointer-events-none absolute inset-5 z-20 border border-white/20 md:inset-8' />
+      {/* <div className='pointer-events-none absolute inset-5 z-20 border border-white/20 md:inset-8' /> */}
 
       {/* Top information */}
       <div className='absolute inset-x-8 top-8 z-30 flex items-start justify-between md:inset-x-12 md:top-10'>
@@ -48,11 +48,11 @@ export function Header() {
         {/* Name */}
         <div className='px-8 md:px-12'>
           <h1 className='leading-[0.82] tracking-[-0.055em]'>
-            <span className='block pl-1 text-[9vw] font-light uppercase text-white/80 md:text-[6vw]'>
+            <span className='block pl-1 text-[4vw] font-light uppercase text-white/80 md:text-[4vw]'>
               HI, I&apos;M
             </span>
 
-            <span className='block text-[21vw] font-medium uppercase md:text-[15vw]'>
+            <span className='block text-[9vw] font-medium uppercase md:text-[11vw]'>
               DULASHI
             </span>
           </h1>

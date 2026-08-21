@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 
 import { motion } from 'framer-motion';
+import { Award, BookOpen, GraduationCap } from 'lucide-react';
 import Image from 'next/image';
 
 import { ParallaxReveal } from '@/components';
@@ -11,57 +12,83 @@ export function Journey() {
   /** @type {import('react').MutableRefObject<HTMLElement>} */
   const containerRef = useRef(null);
 
-  const journeyItems = [
+  const educationItems = [
     {
       number: '01',
-      title: 'The Beginning',
+      icon: GraduationCap,
+      title: 'Bachelor Of Design',
+      subtitle: 'Undergraduate Education',
       description:
-        'Every journey starts with curiosity. This is where my passion, creativity, and desire to create something meaningful first began.',
+        'The foundation of my academic journey, where I developed a strong understanding of my field while building the curiosity and discipline to keep learning.',
     },
     {
       number: '02',
-      title: 'Finding My Direction',
+      icon: BookOpen,
+      title: "Master's Degree",
+      subtitle: 'Advanced Education',
       description:
-        'Through different experiences, ideas, and challenges, I discovered the direction that truly reflects who I am and what I want to create.',
+        'An important step in deepening my knowledge, exploring new perspectives, and developing a more focused academic and professional direction.',
     },
     {
       number: '03',
-      title: 'Moving Forward',
+      icon: Award,
+      title: 'Teaching Certificate',
+      subtitle: 'Professional Development',
       description:
-        'Today, I continue to explore, learn, and evolve, turning every experience into another step in my creative journey.',
+        'A milestone that strengthened my ability to share knowledge, communicate ideas clearly, and support others throughout their own learning journey.',
     },
   ];
 
   return (
-    <section ref={containerRef} className='relative z-10 mt-14 overflow-hidden'>
+    <section
+      ref={containerRef}
+      className='relative z-10 mt-10 overflow-hidden bg-black text-white'
+    >
       <div className='flex flex-col'>
         {/* =========================
-            TOP SECTION
+            HEADER
             ========================= */}
         <div
           className='
+            relative
             grid
             grid-cols-1
             items-center
             gap-8
-            bg-background
             px-6
-            py-10
+            py-12
             sm:px-10
             md:grid-cols-2
             md:gap-12
-            md:p-12
-            lg:px-20
+            md:px-14
+            md:py-16
+            lg:px-24
+            lg:py-20
           '
         >
+          {/* Background glow */}
+          <div
+            className='
+              pointer-events-none
+              absolute
+              left-[-10%]
+              top-[15%]
+              h-[300px]
+              w-[300px]
+              rounded-full
+              bg-white/[0.025]
+              blur-[100px]
+            '
+          />
+
           {/* =========================
-              LEFT — MAIN TITLE
+              LEFT — TITLE
               ========================= */}
           <motion.div
-            className='flex min-w-0 items-center'
+            className='relative min-w-0'
             initial={{
               opacity: 0,
-              y: 50,
+              y: 40,
             }}
             whileInView={{
               opacity: 1,
@@ -80,21 +107,49 @@ export function Journey() {
               className='
                 max-w-2xl
                 overflow-visible
-                py-[0.15em]
-                text-5xl
-                font-medium
-                leading-[1.2]
-                tracking-tight
-
-                sm:text-6xl
-
-                md:text-6xl
-                lg:text-7xl
+                py-[0.1em]
+                text-[10vw]
+                font-light
+                uppercase
+                leading-[0.9]
+                -tracking-wider
+                sm:text-[7vw]
+                md:text-[5vw]
+                lg:text-[4.2vw]
                 [&_*]:!overflow-visible
               '
             >
-              <ParallaxReveal paragraph='Where My Journey Begins' />
+              <ParallaxReveal paragraph='Where My Journey Began.' />
             </h2>
+
+            <motion.p
+              className='
+                mt-5
+                max-w-md
+                text-sm
+                leading-[1.6]
+                text-white/45
+                md:text-base
+              '
+              initial={{
+                opacity: 0,
+                y: 15,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.7,
+                delay: 0.2,
+              }}
+            >
+              A journey shaped by continuous learning, academic growth, and the
+              pursuit of knowledge.
+            </motion.p>
           </motion.div>
 
           {/* =========================
@@ -104,17 +159,18 @@ export function Journey() {
             className='
               relative
               mx-auto
-              aspect-[4/5]
               w-full
-              max-w-[260px]
+              max-w-[350px]
               overflow-hidden
               rounded-3xl
-              bg-muted
-              md:max-w-[280px]
+              border
+              border-white/10
+              bg-white/[0.03]
+              md:max-w-[380px]
             '
             initial={{
               opacity: 0,
-              y: 50,
+              y: 40,
               scale: 0.96,
             }}
             whileInView={{
@@ -133,139 +189,226 @@ export function Journey() {
             }}
           >
             <Image
-              src='/images/arto-suraj-43nEgDYNGVk-unsplash.jpg'
-              alt='Fashion journey'
-              fill
+              src='/images/tri-vo-ItwNHDcO590-unsplash.jpg'
+              alt='Academic journey'
+              width={1200}
+              height={1600}
               priority
-              className='object-cover'
-              sizes='(max-width: 768px) 260px, 280px'
+              className='
+                h-auto
+                w-full
+                grayscale
+                transition-transform
+                duration-700
+                hover:scale-105
+              '
+              sizes='(max-width: 768px) 100vw, 380px'
             />
+
+            {/* Image overlay */}
+            <div className='pointer-events-none absolute inset-0 bg-black/25' />
+
+            {/* Image label */}
+            <div className='pointer-events-none absolute inset-x-4 bottom-4 flex items-end justify-between'>
+              <span className='text-[10px] text-white/50'>2020 — 2024</span>
+            </div>
           </motion.div>
         </div>
 
         {/* =========================
-            STATIC JOURNEY CARDS
+            EDUCATION TIMELINE
             ========================= */}
-        <div className='relative overflow-hidden bg-background py-16 md:py-24'>
-          <div
-            className='
-              flex
-              flex-wrap
-              justify-center
-              gap-6
-              px-6
-              md:gap-10
-              md:px-12
-              lg:px-20
-            '
+        <div
+          className='
+            relative
+            border-t
+            border-white/[0.08]
+            bg-black
+            px-6
+            py-12
+            sm:px-10
+            md:px-14
+            md:py-16
+            lg:px-20
+          '
+        >
+          {/* Section heading */}
+          <motion.div
+            className='mb-8 flex items-end justify-between'
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
           >
-            {journeyItems.map(item => (
-              <motion.article
-                key={item.number}
-                className='
-                  flex
-                  w-full
-                  max-w-[400px]
-                  flex-col
-                  rounded-[2rem]
-                  border
-                  border-foreground/10
-                  p-8
-                  md:p-12
-                  lg:w-[30%]
-                '
-                whileHover={{
-                  y: -8,
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: 'easeOut',
-                }}
-              >
-                {/* =========================
-                    NUMBER
-                    ========================= */}
-                <motion.span
+            <div>
+              <p className='mb-2 text-[10px] uppercase tracking-[0.25em] text-white/35'>
+                Academic milestones
+              </p>
+
+              <h3 className='text-xl font-light tracking-tight md:text-2xl'>
+                Learning never stops.
+              </h3>
+            </div>
+          </motion.div>
+
+          {/* =========================
+              EDUCATION CARDS
+              ========================= */}
+          <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
+            {educationItems.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <motion.article
+                  key={item.number}
                   className='
-                    mb-10
-                    block
-                    text-sm
-                    leading-none
-                    opacity-50
+                    group
+                    relative
+                    flex
+                    min-h-[330px]
+                    flex-col
+                    overflow-hidden
+                    rounded-3xl
+                    border
+                    border-white/[0.09]
+                    bg-white/[0.025]
+                    p-6
+                    transition-all
+                    duration-500
+                    hover:border-white/20
+                    hover:bg-white/[0.05]
+                    md:p-7
                   '
                   initial={{
                     opacity: 0,
-                    y: 20,
+                    y: 40,
                   }}
                   whileInView={{
-                    opacity: 0.5,
+                    opacity: 1,
                     y: 0,
                   }}
                   viewport={{
                     once: true,
-                    amount: 0.3,
-                  }}
-                  transition={{
-                    duration: 0.6,
-                  }}
-                >
-                  {item.number}
-                </motion.span>
-
-                {/* =========================
-                    CARD TITLE
-                    ========================= */}
-                <h3
-                  className='
-                    mb-7
-                    overflow-visible
-                    py-[0.15em]
-                    text-3xl
-                    font-medium
-                    leading-[1.2]
-                    tracking-tight
-
-                    md:text-4xl
-
-                    lg:text-5xl
-                    [&_*]:!overflow-visible
-                  '
-                >
-                  <ParallaxReveal paragraph={item.title} />
-                </h3>
-
-                {/* =========================
-                    DESCRIPTION
-                    ========================= */}
-                <motion.p
-                  className='
-                    max-w-lg
-                    text-base
-                    leading-[1.7]
-                    opacity-60
-                    md:text-lg
-                  '
-                  initial={{
-                    opacity: 0,
-                    y: 30,
-                  }}
-                  whileInView={{
-                    opacity: 0.6,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                    amount: 0.3,
+                    amount: 0.2,
                   }}
                   transition={{
                     duration: 0.7,
-                    delay: 0.1,
+                    delay: index * 0.12,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  whileHover={{
+                    y: -6,
                   }}
                 >
-                  {item.description}
-                </motion.p>
-              </motion.article>
-            ))}
+                  {/* Hover glow */}
+                  <div
+                    className='
+                      pointer-events-none
+                      absolute
+                      -right-16
+                      -top-16
+                      size-32
+                      rounded-full
+                      bg-white/[0.04]
+                      blur-3xl
+                      transition-opacity
+                      duration-500
+                      group-hover:opacity-100
+                    '
+                  />
+
+                  {/* Top row */}
+                  <div className='relative mb-8 flex items-start justify-between'>
+                    <span className='text-[10px] font-medium tracking-[0.2em] text-white/30'>
+                      {item.number}
+                    </span>
+
+                    {/* Icon */}
+                    <div
+                      className='
+                        flex
+                        size-10
+                        items-center
+                        justify-center
+                        rounded-full
+                        border
+                        border-white/10
+                        bg-white/[0.04]
+                        transition-all
+                        duration-500
+                        group-hover:border-white/25
+                        group-hover:bg-white/[0.08]
+                      '
+                    >
+                      <Icon
+                        size={19}
+                        strokeWidth={1.4}
+                        className='
+                          text-white/60
+                          transition-colors
+                          duration-500
+                          group-hover:text-white
+                        '
+                      />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className='relative'>
+                    <p className='mb-2 text-[9px] uppercase tracking-[0.2em] text-white/30'>
+                      {item.subtitle}
+                    </p>
+
+                    <h3
+                      className='
+                        mb-4
+                        overflow-visible
+                        py-[0.1em]
+                        text-2xl
+                        font-light
+                        leading-none
+                        tracking-[-0.03em]
+                        md:text-3xl
+                        [&_*]:!overflow-visible
+                      '
+                    >
+                      <ParallaxReveal paragraph={item.title} />
+                    </h3>
+
+                    <p className='max-w-lg text-sm leading-[1.6] text-white/45'>
+                      {item.description}
+                    </p>
+                  </div>
+
+                  {/* Bottom hover line */}
+                  <div
+                    className='
+                      absolute
+                      inset-x-6
+                      bottom-0
+                      h-px
+                      origin-left
+                      scale-x-0
+                      bg-white/40
+                      transition-transform
+                      duration-500
+                      group-hover:scale-x-100
+                      md:inset-x-7
+                    '
+                  />
+                </motion.article>
+              );
+            })}
           </div>
         </div>
 
@@ -273,9 +416,9 @@ export function Journey() {
             BOTTOM CURVE
             ========================= */}
         <div
-          className='w-screen bg-background'
+          className='w-screen bg-black'
           style={{
-            height: '80px',
+            height: '40px',
             borderRadius: '0 0 50% 50%',
           }}
         />

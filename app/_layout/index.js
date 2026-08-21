@@ -1,5 +1,5 @@
 export * from './contact';
-export * from './description';
+export * from './Learned';
 export * from './header';
 export * from './navbar';
 export * from './offcanvas';
@@ -7,3 +7,4 @@ export * from './project';
 export * from './thumbnail';
 export * from './transition';
 export * from './journey';
+export * from './description';

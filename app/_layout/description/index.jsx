@@ -6,7 +6,7 @@ import Balancer from 'react-wrap-balancer';
 
 import { MagneticButton, ParallaxFade, ParallaxReveal } from '@/components';
 
-import { Wrapper } from './index.styled';
+import { Wrapper } from '../description/index.styled';
 
 const phrase = 'So, Who am I';
 
@@ -29,14 +29,16 @@ export function Description() {
 
         {/* Right - Content */}
         <div className='flex w-full flex-1 flex-col justify-center lg:w-1/2 lg:ps-16'>
-          <h2 className='text-2xl font-medium lg:text-2xl'>
+          {/* Heading */}
+          <h2 className='text-[4vw] font-black uppercase leading-[1.05] tracking-tight text-black md:text-[4vw]'>
             <ParallaxReveal paragraph={phrase} />
           </h2>
 
+          {/* Description */}
           <ParallaxFade>
             <Balancer
               as='p'
-              className='mt-6 max-w-xl text-base leading-relaxed lg:text-lg'
+              className='mt-4 max-w-xl text-base leading-relaxed lg:text-lg'
             >
               I’m a passionate fashion designer who transforms ideas into
               expressive and contemporary designs. I’m inspired by culture,
@@ -49,14 +51,14 @@ export function Description() {
 
           {/* About Button */}
           <motion.div
-            whileInView={{ y: '-15%' }}
+            whileInView={{ y: '-10%' }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className='mt-10'
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className='mt-8 flex justify-center'
           >
-            <Link href='/about' passHref>
-              <MagneticButton variant='ghost' size='xl'>
-                About me
+            <Link href='/about'>
+              <MagneticButton variant='ghost' size='xl' className='px-8'>
+                About Me
               </MagneticButton>
             </Link>
           </motion.div>
