@@ -1,18 +1,29 @@
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPinterestP,
+} from 'react-icons/fa6';
+
 export const socialMedias = [
   {
     href: '#',
-    title: 'Social Link 1',
+    title: 'Instagram',
+    icon: FaInstagram,
   },
   {
     href: '#',
-    title: 'Social Link 2',
+    title: 'Facebook',
+    icon: FaFacebookF,
   },
   {
     href: '#',
-    title: 'Social Link 3',
+    title: 'LinkedIn',
+    icon: FaLinkedinIn,
   },
   {
     href: '#',
-    title: 'Social Link 4',
+    title: 'Pinterest',
+    icon: FaPinterestP,
   },
 ];

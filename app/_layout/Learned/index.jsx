@@ -60,53 +60,111 @@ export function Learned() {
   return (
     <article className='relative overflow-hidden bg-white py-16 text-black md:py-20'>
       <div className='container relative z-10'>
-        {/* =====================================================
-            HEADER
-        ====================================================== */}
-        <div className='mb-16 grid gap-8 lg:grid-cols-2 lg:items-end'>
-          <div>
-            <ParallaxFade>
-              <span className='mb-3 block text-[10px] font-medium uppercase tracking-[0.25em] text-black/40'>
-                Professional & Academic Journey
-              </span>
-            </ParallaxFade>
-
-            <h2 className='text-[4vw] font-black uppercase leading-[1.05] tracking-tight text-black md:text-[4vw]'>
-              <ParallaxReveal paragraph={phrase} />
-            </h2>
-          </div>
-
+        {/* HEADER */}
+        <div className='mb-16'>
           <ParallaxFade>
-            <p className='max-w-md text-xs leading-6 text-black/50 lg:ml-auto lg:text-sm'>
-              Each stage of my journey has contributed to the way I approach
-              research, teaching, creativity, collaboration, and continuous
-              professional growth.
-            </p>
+            <span className='mb-3 block text-[10px] font-medium uppercase tracking-[0.25em] text-black/40'>
+              Professional & Academic Journey
+            </span>
           </ParallaxFade>
+
+          <h2 className='text-[4vw] font-black uppercase leading-[1.05] tracking-tight text-black md:text-[4vw]'>
+            <ParallaxReveal paragraph={phrase} />
+          </h2>
         </div>
 
-        {/* =====================================================
-            DESKTOP JOURNEY
-        ====================================================== */}
+        {/* DESKTOP JOURNEY */}
         <div className='relative hidden lg:block'>
           <div className='relative mx-auto h-[560px] w-full'>
-            {/* =================================================
-                ROAD
-            ================================================== */}
+            {/* ROAD */}
             <div className='absolute inset-x-0 top-1/2 z-0 h-[42px] -translate-y-1/2'>
-              {/* Road background */}
               <div className='absolute inset-0 rounded-full bg-black/[0.035]' />
 
-              {/* Road border */}
               <div className='absolute inset-0 rounded-full border border-black/[0.08]' />
 
-              {/* Road center line */}
               <div className='absolute inset-x-0 top-1/2 border-t border-dashed border-black/15' />
+
+              {/* TRAVELING GIRL */}
+              <motion.div
+                className='absolute left-0 top-1/2 z-40 -translate-x-1/2 -translate-y-1/2'
+                animate={{
+                  left: ['0%', '25%', '50%', '75%', '100%'],
+                }}
+                transition={{
+                  duration: 9,
+                  ease: 'linear',
+                  repeat: Infinity,
+                  repeatType: 'loop',
+                }}
+              >
+                <motion.div
+                  animate={{
+                    y: [0, -2, 0, -1, 0],
+                  }}
+                  transition={{
+                    duration: 0.65,
+                    ease: 'easeInOut',
+                    repeat: Infinity,
+                  }}
+                  className='relative flex flex-col items-center'
+                >
+                  {/* Hair */}
+                  <div className='absolute -top-1.5 size-3 rounded-full bg-black/90' />
+
+                  {/* Head */}
+                  <div className='relative z-10 size-2 rounded-full bg-black' />
+
+                  {/* Dress */}
+                  <div
+                    className='mt-0.5 h-4 w-3 bg-black'
+                    style={{
+                      clipPath: 'polygon(35% 0, 65% 0, 100% 100%, 0 100%)',
+                    }}
+                  />
+
+                  {/* Legs */}
+                  <div className='relative -mt-0.5 h-2.5 w-3'>
+                    <motion.span
+                      animate={{
+                        rotate: [-25, 25, -25],
+                      }}
+                      transition={{
+                        duration: 0.65,
+                        repeat: Infinity,
+                      }}
+                      className='absolute left-1/2 top-0 h-2.5 w-px origin-top bg-black'
+                    />
+
+                    <motion.span
+                      animate={{
+                        rotate: [25, -25, 25],
+                      }}
+                      transition={{
+                        duration: 0.65,
+                        repeat: Infinity,
+                      }}
+                      className='absolute left-1/2 top-0 h-2.5 w-px origin-top bg-black'
+                    />
+                  </div>
+
+                  {/* Shadow */}
+                  <motion.div
+                    animate={{
+                      scaleX: [1, 0.65, 1],
+                      opacity: [0.15, 0.05, 0.15],
+                    }}
+                    transition={{
+                      duration: 0.65,
+                      ease: 'easeInOut',
+                      repeat: Infinity,
+                    }}
+                    className='absolute -bottom-1 h-px w-5 bg-black'
+                  />
+                </motion.div>
+              </motion.div>
             </div>
 
-            {/* =================================================
-                DESKTOP MILESTONES
-            ================================================== */}
+            {/* MILESTONES */}
             <div className='absolute inset-0 grid grid-cols-5'>
               {journey.map((item, index) => {
                 const Icon = item.icon;
@@ -134,9 +192,7 @@ export function Learned() {
                     }}
                     className='relative h-full'
                   >
-                    {/* =================================================
-                        CONTENT
-                    ================================================== */}
+                    {/* CONTENT */}
                     <div
                       className={[
                         'absolute left-1/2 z-20',
@@ -160,9 +216,7 @@ export function Learned() {
                       </p>
                     </div>
 
-                    {/* =================================================
-                        CONNECTOR
-                    ================================================== */}
+                    {/* CONNECTOR */}
                     <div
                       className={[
                         'absolute left-1/2 z-10 w-px',
@@ -173,9 +227,7 @@ export function Learned() {
                       ].join(' ')}
                     />
 
-                    {/* =================================================
-                        ICON / ROAD MARKER
-                    ================================================== */}
+                    {/* ICON */}
                     <div className='absolute left-1/2 top-1/2 z-30 flex size-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-black/15 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.07)] transition-all duration-300 hover:scale-110 hover:bg-black hover:text-white'>
                       <Icon size={17} strokeWidth={1.5} aria-hidden='true' />
                     </div>
@@ -186,37 +238,28 @@ export function Learned() {
           </div>
         </div>
 
-        {/* =====================================================
-            MOBILE JOURNEY
-        ====================================================== */}
+        {/* MOBILE JOURNEY */}
         <div
           className='relative lg:hidden'
           style={{
             '--timeline-x': '32px',
           }}
         >
-          {/* =================================================
-              MOBILE ROAD
-          ================================================== */}
+          {/* MOBILE ROAD */}
           <div
             className='pointer-events-none absolute inset-y-0 z-0 w-[32px]'
             style={{
               left: 'calc(var(--timeline-x) - 16px)',
             }}
           >
-            {/* Road body */}
             <div className='absolute inset-0 rounded-full bg-black/[0.035]' />
 
-            {/* Road border */}
             <div className='absolute inset-0 rounded-full border border-black/[0.06]' />
 
-            {/* Road center */}
             <div className='absolute left-1/2 top-0 h-full -translate-x-1/2 border-l border-dashed border-black/20' />
           </div>
 
-          {/* =================================================
-              MOBILE ITEMS
-          ================================================== */}
+          {/* MOBILE ITEMS */}
           <div className='relative z-10 space-y-8'>
             {journey.map((item, index) => {
               const Icon = item.icon;
@@ -243,29 +286,9 @@ export function Learned() {
                   }}
                   className='relative min-h-[108px]'
                 >
-                  {/* =================================================
-                      MOBILE ICON
-                  ================================================== */}
+                  {/* MOBILE ICON */}
                   <div
-                    className='
-                      absolute
-                      top-4
-                      z-30
-                      flex
-                      size-8
-                      -translate-x-1/2
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-black/15
-                      bg-white
-                      shadow-[0_4px_18px_rgba(0,0,0,0.07)]
-                      transition-all
-                      duration-300
-                      hover:bg-black
-                      hover:text-white
-                    '
+                    className='absolute top-4 z-30 flex size-8 -translate-x-1/2 items-center justify-center rounded-full border border-black/15 bg-white shadow-[0_4px_18px_rgba(0,0,0,0.07)] transition-all duration-300 hover:bg-black hover:text-white'
                     style={{
                       left: 'var(--timeline-x)',
                     }}
@@ -273,39 +296,17 @@ export function Learned() {
                     <Icon size={13} strokeWidth={1.5} aria-hidden='true' />
                   </div>
 
-                  {/* =================================================
-                      CONNECTOR
-                  ================================================== */}
+                  {/* CONNECTOR */}
                   <div
-                    className='
-                      absolute
-                      top-[31px]
-                      z-20
-                      h-px
-                      bg-black/10
-                    '
+                    className='absolute top-[31px] z-20 h-px bg-black/10'
                     style={{
                       left: 'var(--timeline-x)',
                       width: '24px',
                     }}
                   />
 
-                  {/* =================================================
-                      CONTENT CARD
-                  ================================================== */}
-                  <div
-                    className='
-                      relative
-                      z-10
-                      ml-[56px]
-                      rounded-xl
-                      border
-                      border-black/[0.08]
-                      bg-white
-                      p-4
-                      shadow-[0_5px_25px_rgba(0,0,0,0.025)]
-                    '
-                  >
+                  {/* CONTENT CARD */}
+                  <div className='relative z-10 ml-[56px] rounded-xl border border-black/[0.08] bg-white p-4 shadow-[0_5px_25px_rgba(0,0,0,0.025)]'>
                     <span className='text-[9px] font-medium uppercase tracking-[0.18em] text-black/35'>
                       {item.duration}
                     </span>
@@ -323,13 +324,6 @@ export function Learned() {
             })}
           </div>
         </div>
-
-        {/* =====================================================
-            FOOTER
-        ====================================================== */}
-        <ParallaxFade>
-          <div className='mt-14 border-t border-black/10 pt-6' />
-        </ParallaxFade>
       </div>
     </article>
   );

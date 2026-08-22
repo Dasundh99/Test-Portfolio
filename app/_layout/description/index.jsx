@@ -28,7 +28,7 @@ export function Description() {
         </div>
 
         {/* Right - Content */}
-        <div className='flex w-full flex-1 flex-col justify-center lg:w-1/2 lg:ps-16'>
+        <div className='flex w-full flex-1 flex-col items-center justify-center text-center lg:w-1/2 lg:ps-16'>
           {/* Heading */}
           <h2 className='text-[4vw] font-black uppercase leading-[1.05] tracking-tight text-black md:text-[4vw]'>
             <ParallaxReveal paragraph={phrase} />
@@ -57,7 +57,7 @@ export function Description() {
             className='mt-8 flex justify-center'
           >
             <Link href='/about'>
-              <MagneticButton variant='ghost' size='xl' className='px-8'>
+              <MagneticButton variant='ghost' size='md' className='px-5'>
                 About Me
               </MagneticButton>
             </Link>
