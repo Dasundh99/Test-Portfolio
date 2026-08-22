@@ -7,226 +7,210 @@ import { ParallaxFade, ParallaxReveal } from '@/components';
 const projectItems = [
   {
     number: '01',
-    title: 'DENIMOLOGY',
+    title: 'Denimology',
     description:
-      'A denim-focused design project exploring the relationship between identity, material, form, and contemporary fashion through experimental visual concepts.',
+      'A research-led exploration of denim examining the relationship between identity, materiality, form, and contemporary fashion through experimental design development.',
   },
   {
     number: '02',
-    title: 'WINBACK',
+    title: 'Winback',
     description:
-      'A strategic design project focused on reconnecting with audiences through compelling visual communication, thoughtful storytelling, and purposeful brand experiences.',
+      'A strategic fashion design project exploring audience connection through visual communication, narrative development, and considered brand experiences.',
   },
   {
     number: '03',
-    title: 'CONCEALED STRENGTH',
+    title: 'Concealed Strength',
     description:
-      'An exploration of hidden qualities and structural possibilities, transforming subtle details, materials, and forms into a design that communicates strength beneath the surface.',
+      'An exploration of hidden qualities and structural possibilities, translating subtle materials, details, and forms into a study of strength beneath the surface.',
   },
 ];
 
 const galleryItems = [
   {
     image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
-    description: 'Exploring visual ideas and creative possibilities.',
+    description: 'Visual research and initial exploration.',
   },
   {
     image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
-    description: 'Developing concepts through experimentation.',
+    description: 'Concept development through experimentation.',
   },
   {
     image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
-    description: 'Investigating materials, forms, and visual language.',
+    description: 'Material, form, and visual investigation.',
   },
   {
     image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
-    description: 'Refining ideas through an iterative process.',
+    description: 'Iterative development and refinement.',
   },
   {
     image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
-    description: 'Connecting research with creative decisions.',
+    description: 'Research translated into design decisions.',
   },
   {
     image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
-    description: 'Creating thoughtful design outcomes.',
+    description: 'Exploration of alternative visual directions.',
   },
   {
     image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
-    description: 'Experimenting with different visual approaches.',
+    description: 'Final refinement of the design approach.',
   },
+];
+
+const gridClasses = [
+  'col-span-2 row-span-2',
+  'col-span-1 row-span-1',
+  'col-span-1 row-span-2',
+  'col-span-1 row-span-1',
+  'col-span-2 row-span-1',
+  'col-span-1 row-span-2',
+  'col-span-1 row-span-1',
 ];
 
 export function DesignProjects() {
   return (
-    <article className='relative bg-black py-12 text-white md:py-16 lg:py-20'>
+    <article className='relative overflow-hidden bg-black py-16 text-white md:py-20 lg:py-24'>
       <div className='container relative'>
-        {/* =====================================================
-            MAIN LAYOUT — 60% / 40%
-        ===================================================== */}
-        <div className='grid grid-cols-1 gap-10 lg:grid-cols-[60%_40%] lg:gap-0'>
-          {/* =====================================================
-              LEFT COLUMN — 60%
-              RANDOM 12 IMAGE GRID
-          ===================================================== */}
-          <div className='lg:pr-8 xl:pr-12'>
+        <div className='grid grid-cols-1 gap-14 lg:grid-cols-[1.55fr_1fr] lg:gap-16 xl:gap-20'>
+          {/* LEFT — VISUAL PROJECT GALLERY */}
+          <div>
             <ParallaxFade>
-              <h2 className='py-10 text-[4vw] font-black uppercase leading-[1.05] tracking-tight text-white md:text-[4vw]'>
-                <ParallaxReveal paragraph='Design Projects' />
-              </h2>
+              <div className='mb-8 flex items-end justify-between gap-6 md:mb-10'>
+                <div>
+                  <span className='mb-3 block text-[9px] font-medium uppercase tracking-[0.28em] text-white/35'>
+                    Selected Work
+                  </span>
+
+                  <h2 className='max-w-3xl text-[clamp(2.7rem,5vw,4.8rem)] font-black uppercase leading-[0.92] -tracking-wider text-white'>
+                    <ParallaxReveal paragraph='Design Projects' />
+                  </h2>
+                </div>
+              </div>
             </ParallaxFade>
 
-            {/* 12 IMAGE RANDOM GRID */}
+            {/* GALLERY */}
             <div
               className='
                 grid
-                auto-rows-[120px]
+                auto-rows-[115px]
                 grid-cols-2
-                gap-2
-                sm:auto-rows-[140px]
-                md:auto-rows-[150px]
+                gap-1.5
+                sm:auto-rows-[135px]
+                md:auto-rows-[145px]
                 md:grid-cols-4
-                md:gap-3
+                md:gap-2
               '
             >
-              {galleryItems.map((item, index) => {
-                /*
-                  Random-looking masonry layout.
-                  Different images receive different sizes.
-                */
-                const gridClasses = [
-                  'col-span-2 row-span-2',
-                  'col-span-1 row-span-1',
-                  'col-span-1 row-span-2',
-                  'col-span-1 row-span-1',
-                  'col-span-2 row-span-1',
-                  'col-span-1 row-span-2',
-                  'col-span-1 row-span-1',
-                  'col-span-2 row-span-2',
-                  'col-span-1 row-span-1',
-                  'col-span-1 row-span-2',
-                  'col-span-2 row-span-1',
-                  'col-span-1 row-span-1',
-                ];
+              {galleryItems.map((item, index) => (
+                <motion.div
+                  key={`${item.image}-${index}`}
+                  initial={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.1,
+                  }}
+                  transition={{
+                    duration: 0.7,
+                    delay: index * 0.06,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className={`
+                    group
+                    relative
+                    min-h-0
+                    overflow-hidden
+                    bg-white/[0.04]
+                    ${gridClasses[index]}
+                  `}
+                >
+                  {/* IMAGE */}
+                  <img
+                    src={item.image}
+                    alt={item.description}
+                    className='
+                      absolute
+                      inset-0
+                      size-full
+                      object-cover
+                      grayscale-[15%]
+                      transition-all
+                      duration-1000
+                      ease-out
+                      group-hover:scale-[1.04]
+                      group-hover:grayscale-0
+                    '
+                  />
 
-                return (
-                  <motion.div
-                    key={`${item.image}-${index}`}
-                    initial={{
-                      opacity: 0,
-                      y: 25,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                      amount: 0.1,
-                    }}
-                    transition={{
-                      duration: 0.6,
-                      delay: index * 0.05,
-                      ease: 'easeOut',
-                    }}
-                    className={`
-                      group
-                      relative
-                      min-h-0
-                      overflow-hidden
-                      bg-white/5
-                      ${gridClasses[index]}
-                    `}
+                  {/* SUBTLE OVERLAY */}
+                  <div
+                    className='
+                      absolute
+                      inset-0
+                      bg-gradient-to-t
+                      from-black/75
+                      via-black/5
+                      to-transparent
+                      opacity-70
+                      transition-opacity
+                      duration-700
+                      group-hover:opacity-100
+                    '
+                  />
+
+                  {/* NUMBER */}
+                  <span
+                    className='
+                      absolute
+                      right-3
+                      top-3
+                      text-[8px]
+                      font-medium
+                      tracking-[0.22em]
+                      text-white/45
+                      transition-colors
+                      duration-500
+                      group-hover:text-white/80
+                      md:right-4
+                      md:top-4
+                    '
                   >
-                    {/* IMAGE */}
-                    <img
-                      src={item.image}
-                      alt={item.description}
-                      className='
-                        absolute
-                        inset-0
-                        size-full
-                        object-cover
-                        transition-transform
-                        duration-700
-                        ease-out
-                        group-hover:scale-105
-                      '
-                    />
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
 
-                    {/* DARK OVERLAY */}
-                    <div
-                      className='
-                        absolute
-                        inset-0
-                        bg-gradient-to-t
-                        from-black/80
-                        via-black/10
-                        to-transparent
-                        opacity-60
-                        transition-opacity
-                        duration-500
-                        group-hover:opacity-100
-                      '
-                    />
-
-                    {/* IMAGE NUMBER */}
-                    <span
-                      className='
-                        absolute
-                        right-3
-                        top-3
-                        text-[8px]
-                        font-medium
-                        tracking-[0.2em]
-                        text-white/70
-                        md:right-4
-                        md:top-4
-                        md:text-[9px]
-                      '
-                    >
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-
-                    {/* IMAGE DESCRIPTION */}
-                    <div
-                      className='
-                        absolute
-                        inset-x-0
-                        bottom-0
-                        p-3
-                        md:p-4
-                      '
-                    >
-                      <p
-                        className='
-                          max-w-xs
-                          text-[10px]
-                          leading-relaxed
-                          text-white/90
-                          md:text-xs
-                        '
-                      >
-                        {item.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
+                  {/* DESCRIPTION */}
+                  <div className='absolute inset-x-0 bottom-0 p-3.5 md:p-4'>
+                    <p className='max-w-[220px] text-[9px] leading-[1.6] text-white/75 md:text-[10px]'>
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
 
-          {/* =====================================================
-              RIGHT COLUMN — 40%
-              THREE ROWS
-          ===================================================== */}
-          <div className='lg:pl-8 xl:pl-12'>
-            <div className='flex flex-col'>
+          {/* RIGHT — PROJECT INFORMATION */}
+          <div className='lg:pt-[5.7rem]'>
+            <div className='mb-8 hidden lg:block'>
+              <p className='max-w-sm text-xs leading-[1.8] text-white/40'>
+                A selection of fashion design projects developed through
+                research, experimentation, material exploration, and conceptual
+                development.
+              </p>
+            </div>
+
+            <div className='border-t border-white/15'>
               {projectItems.map((item, index) => (
                 <motion.div
                   key={item.number}
                   initial={{
                     opacity: 0,
-                    x: 20,
+                    x: 18,
                   }}
                   whileInView={{
                     opacity: 1,
@@ -237,65 +221,48 @@ export function DesignProjects() {
                     amount: 0.25,
                   }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.65,
                     delay: index * 0.1,
-                    ease: 'easeOut',
+                    ease: [0.22, 1, 0.36, 1],
                   }}
                   className='
+                    group
                     grid
-                    grid-cols-[45px_1fr]
+                    grid-cols-[36px_1fr]
                     gap-4
-                    border-t
+                    border-b
                     border-white/10
-                    py-8
-                    md:grid-cols-[55px_1fr]
-                    md:gap-6
-                    md:py-10
+                    py-7
+                    md:grid-cols-[42px_1fr]
+                    md:gap-5
+                    md:py-9
                   '
                 >
                   {/* NUMBER */}
                   <div>
-                    <span
-                      className='
-                        text-xs
-                        font-medium
-                        tracking-[0.2em]
-                        text-white/35
-                        md:text-sm
-                      '
-                    >
+                    <span className='text-[9px] font-medium tracking-[0.2em] text-white/30 transition-colors duration-300 group-hover:text-white/70'>
                       {item.number}
                     </span>
                   </div>
 
-                  {/* TITLE + DESCRIPTION */}
+                  {/* PROJECT DETAILS */}
                   <div>
-                    <h3
-                      className='
-                        text-sm
-                        font-semibold
-                        uppercase
-                        leading-tight
-                        tracking-tight
-                        text-white
-                        md:text-base
-                      '
-                    >
+                    <h3 className='text-[15px] font-medium uppercase leading-[1.1] tracking-[-0.01em] text-white md:text-base'>
                       {item.title}
                     </h3>
 
-                    <p
-                      className='
-                        mt-3
-                        max-w-md
-                        text-xs
-                        leading-relaxed
-                        text-white/50
-                        md:text-sm
-                      '
-                    >
+                    <p className='mt-3 max-w-md text-[11px] leading-[1.75] text-white/45 md:text-xs'>
                       {item.description}
                     </p>
+
+                    {/* PROJECT INDICATOR */}
+                    <div className='mt-5 flex items-center gap-2'>
+                      <span className='h-px w-5 bg-white/25 transition-all duration-500 group-hover:w-10 group-hover:bg-white/70' />
+
+                      <span className='text-[7px] uppercase tracking-[0.2em] text-white/25 transition-colors duration-300 group-hover:text-white/50'>
+                        Project {item.number}
+                      </span>
+                    </div>
                   </div>
                 </motion.div>
               ))}

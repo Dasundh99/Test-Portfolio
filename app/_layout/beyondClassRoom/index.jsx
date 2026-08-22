@@ -78,7 +78,7 @@ export function BeyondClassRoom() {
           '
         >
           <ParallaxFade>
-            <h2 className='text-[4vw] font-black uppercase leading-[1.05] tracking-tight text-black md:text-[4vw]'>
+            <h2 className='max-w-4xl text-[clamp(2.5rem,5vw,4.5rem)] font-black uppercase leading-[0.98] tracking-[-0.045em] text-black'>
               <ParallaxReveal paragraph='Learning Beyond the Classroom' />
             </h2>
           </ParallaxFade>

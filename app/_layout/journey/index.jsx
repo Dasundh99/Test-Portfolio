@@ -42,12 +42,10 @@ export function Journey() {
   return (
     <section
       ref={containerRef}
-      className='relative z-10 mt-10 overflow-hidden bg-black text-white'
+      className='relative z-10 mt-10 overflow-hidden bg-black px-3 text-white'
     >
-      <div className='flex flex-col'>
-        {/* =========================
-            HEADER
-            ========================= */}
+      <div className='flex flex-col bg-black'>
+        {/* HEADER */}
         <div
           className='
             relative
@@ -55,6 +53,7 @@ export function Journey() {
             grid-cols-1
             items-center
             gap-8
+            bg-black
             px-6
             py-12
             sm:px-10
@@ -62,8 +61,7 @@ export function Journey() {
             md:gap-12
             md:px-14
             md:py-16
-            lg:px-24
-            lg:py-20
+            lg:p-20
           '
         >
           {/* Background glow */}
@@ -81,9 +79,7 @@ export function Journey() {
             '
           />
 
-          {/* =========================
-              LEFT — TITLE
-              ========================= */}
+          {/* LEFT — TITLE */}
           <motion.div
             className='relative min-w-0'
             initial={{
@@ -105,18 +101,13 @@ export function Journey() {
           >
             <h2
               className='
-                max-w-2xl
-                overflow-visible
-                py-[0.1em]
-                text-[10vw]
-                font-light
+                max-w-4xl
+                text-[clamp(2.5rem,5vw,4.5rem)]
+                font-black
                 uppercase
-                leading-[0.9]
-                -tracking-wider
-                sm:text-[7vw]
-                md:text-[5vw]
-                lg:text-[4.2vw]
-                [&_*]:!overflow-visible
+                leading-[0.98]
+                tracking-[-0.045em]
+                text-white
               '
             >
               <ParallaxReveal paragraph='Where My Journey Began.' />
@@ -127,8 +118,8 @@ export function Journey() {
                 mt-5
                 max-w-md
                 text-sm
-                leading-[1.6]
-                text-white/45
+                leading-relaxed
+                text-white/60
                 md:text-base
               '
               initial={{
@@ -152,9 +143,7 @@ export function Journey() {
             </motion.p>
           </motion.div>
 
-          {/* =========================
-              RIGHT — IMAGE
-              ========================= */}
+          {/* RIGHT — IMAGE */}
           <motion.div
             className='
               relative
@@ -165,7 +154,7 @@ export function Journey() {
               rounded-3xl
               border
               border-white/10
-              bg-white/[0.03]
+              bg-black
               md:max-w-[380px]
             '
             initial={{
@@ -205,31 +194,29 @@ export function Journey() {
               sizes='(max-width: 768px) 100vw, 380px'
             />
 
-            {/* Image overlay */}
             <div className='pointer-events-none absolute inset-0 bg-black/25' />
 
-            {/* Image label */}
             <div className='pointer-events-none absolute inset-x-4 bottom-4 flex items-end justify-between'>
-              <span className='text-[10px] text-white/50'>2020 — 2024</span>
+              <span className='text-[10px] tracking-wider text-white/40'>
+                2020 — 2024
+              </span>
             </div>
           </motion.div>
         </div>
 
-        {/* =========================
-            EDUCATION TIMELINE
-            ========================= */}
+        {/* EDUCATION TIMELINE */}
         <div
           className='
             relative
             border-t
-            border-white/[0.08]
+            border-white/10
             bg-black
             px-6
             py-12
             sm:px-10
             md:px-14
             md:py-16
-            lg:px-20
+            lg:p-20
           '
         >
           {/* Section heading */}
@@ -251,19 +238,17 @@ export function Journey() {
             }}
           >
             <div>
-              <p className='mb-2 text-[10px] uppercase tracking-[0.25em] text-white/35'>
+              <p className='mb-2 text-[10px] uppercase tracking-[0.2em] text-white/40'>
                 Academic milestones
               </p>
 
-              <h3 className='text-xl font-light tracking-tight md:text-2xl'>
+              <h3 className='text-xl font-light tracking-tight text-white md:text-2xl'>
                 Learning never stops.
               </h3>
             </div>
           </motion.div>
 
-          {/* =========================
-              EDUCATION CARDS
-              ========================= */}
+          {/* EDUCATION CARDS */}
           <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
             {educationItems.map((item, index) => {
               const Icon = item.icon;
@@ -275,18 +260,18 @@ export function Journey() {
                     group
                     relative
                     flex
-                    min-h-[330px]
+                    min-h-[300px]
                     flex-col
                     overflow-hidden
                     rounded-3xl
                     border
-                    border-white/[0.09]
-                    bg-white/[0.025]
+                    border-white/[0.08]
+                    bg-white/[0.015]
                     p-6
                     transition-all
                     duration-500
-                    hover:border-white/20
-                    hover:bg-white/[0.05]
+                    hover:border-white/[0.18]
+                    hover:bg-white/[0.035]
                     md:p-7
                   '
                   initial={{
@@ -307,33 +292,44 @@ export function Journey() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                   whileHover={{
-                    y: -6,
+                    y: -5,
                   }}
                 >
-                  {/* Hover glow */}
+                  {/* Subtle hover glow */}
                   <div
                     className='
                       pointer-events-none
                       absolute
-                      -right-16
-                      -top-16
-                      size-32
+                      -right-20
+                      -top-20
+                      size-40
                       rounded-full
-                      bg-white/[0.04]
+                      bg-white/[0.035]
+                      opacity-0
                       blur-3xl
                       transition-opacity
-                      duration-500
+                      duration-700
                       group-hover:opacity-100
                     '
                   />
 
                   {/* Top row */}
-                  <div className='relative mb-8 flex items-start justify-between'>
-                    <span className='text-[10px] font-medium tracking-[0.2em] text-white/30'>
+                  <div className='relative mb-10 flex items-start justify-between'>
+                    <span
+                      className='
+                        text-[10px]
+                        font-medium
+                        tracking-[0.2em]
+                        text-white/30
+                        transition-colors
+                        duration-500
+                        group-hover:text-white/60
+                        md:text-xs
+                      '
+                    >
                       {item.number}
                     </span>
 
-                    {/* Icon */}
                     <div
                       className='
                         flex
@@ -343,41 +339,43 @@ export function Journey() {
                         rounded-full
                         border
                         border-white/10
-                        bg-white/[0.04]
+                        bg-white/[0.02]
+                        text-white/40
                         transition-all
                         duration-500
                         group-hover:border-white/25
-                        group-hover:bg-white/[0.08]
+                        group-hover:bg-white/[0.05]
+                        group-hover:text-white
                       '
                     >
-                      <Icon
-                        size={19}
-                        strokeWidth={1.4}
-                        className='
-                          text-white/60
-                          transition-colors
-                          duration-500
-                          group-hover:text-white
-                        '
-                      />
+                      <Icon size={18} strokeWidth={1.3} />
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className='relative'>
-                    <p className='mb-2 text-[9px] uppercase tracking-[0.2em] text-white/30'>
+                    <p
+                      className='
+                        mb-3
+                        text-[9px]
+                        font-medium
+                        uppercase
+                        tracking-[0.22em]
+                        text-white/35
+                      '
+                    >
                       {item.subtitle}
                     </p>
 
                     <h3
                       className='
-                        mb-4
+                        mb-5
                         overflow-visible
                         py-[0.1em]
                         text-2xl
                         font-light
-                        leading-none
-                        tracking-[-0.03em]
+                        leading-[0.95]
+                        tracking-[-0.035em]
                         md:text-3xl
                         [&_*]:!overflow-visible
                       '
@@ -385,7 +383,17 @@ export function Journey() {
                       <ParallaxReveal paragraph={item.title} />
                     </h3>
 
-                    <p className='max-w-lg text-sm leading-[1.6] text-white/45'>
+                    <p
+                      className='
+                        max-w-md
+                        text-[13px]
+                        leading-6
+                        text-white/45
+                        transition-colors
+                        duration-500
+                        group-hover:text-white/60
+                      '
+                    >
                       {item.description}
                     </p>
                   </div>
@@ -399,9 +407,10 @@ export function Journey() {
                       h-px
                       origin-left
                       scale-x-0
-                      bg-white/40
+                      bg-white/50
                       transition-transform
-                      duration-500
+                      duration-700
+                      ease-out
                       group-hover:scale-x-100
                       md:inset-x-7
                     '
@@ -412,9 +421,7 @@ export function Journey() {
           </div>
         </div>
 
-        {/* =========================
-            BOTTOM CURVE
-            ========================= */}
+        {/* BOTTOM CURVE */}
         <div
           className='w-screen bg-black'
           style={{
