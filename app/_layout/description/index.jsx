@@ -33,7 +33,7 @@ export function Description() {
           {/* Left - Image */}
           <div className='w-full lg:w-1/2'>
             <ParallaxFade>
-              <div className='aspect-[4/5] w-full overflow-hidden rounded-2xl bg-muted-foreground'>
+              <div className='aspect-[4/5] w-full overflow-hidden bg-muted-foreground'>
                 <img
                   src='/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg'
                   alt='Profile'

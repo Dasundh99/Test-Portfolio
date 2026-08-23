@@ -1,4 +1,6 @@
+import { ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Transition } from '@/layout';
 
@@ -12,16 +14,30 @@ export default function About() {
   return (
     <Transition>
       <main className='min-h-screen bg-background text-foreground'>
-        <section className='mx-auto w-full max-w-[1400px] px-6 py-12 md:px-10 md:py-16 lg:px-16'>
+        <section className='mx-auto w-full max-w-[1400px] px-6 py-8 md:p-10 lg:px-16'>
           {/* Intro */}
-          <div className='border-b border-border/40 pb-10 md:pb-14'>
-            <div className='mb-5 flex items-center justify-between'>
+          <div className='border-b border-border/40 pb-8 md:pb-10'>
+            <div className='mb-6 flex items-center justify-between'>
               <span className='text-[10px] uppercase tracking-[0.2em] text-muted-foreground'>
                 About
               </span>
+
+              {/* Back to Home */}
+              <Link
+                href='/'
+                className='group inline-flex items-center gap-3 rounded-full border border-border/60 px-4 py-2.5 text-[10px] uppercase tracking-[0.18em] transition-all duration-300 hover:bg-foreground hover:text-background'
+              >
+                <ArrowLeft
+                  size={13}
+                  strokeWidth={1.5}
+                  className='transition-transform duration-300 group-hover:-translate-x-1'
+                />
+
+                <span>Back to Home</span>
+              </Link>
             </div>
 
-            <h1 className='max-w-5xl text-[clamp(3.5rem,9vw,8rem)] font-medium leading-[0.85] tracking-[-0.07em]'>
+            <h1 className='max-w-5xl text-[clamp(3.25rem,8vw,7.5rem)] font-medium leading-[0.86] tracking-[-0.07em]'>
               Dulashi
               <br />
               Kongahawaththa
@@ -29,13 +45,14 @@ export default function About() {
           </div>
 
           {/* About content */}
-          <div className='grid grid-cols-1 gap-10 py-10 md:grid-cols-12 md:gap-12 md:py-14'>
+          <div className='grid grid-cols-1 gap-8 py-8 md:grid-cols-12 md:gap-10 md:py-10'>
+            {/* Image */}
             <div className='md:col-span-4'>
               <p className='text-[10px] uppercase tracking-[0.2em] text-muted-foreground'>
                 Fashion Design Lecturer
               </p>
 
-              <div className='mt-5 overflow-hidden'>
+              <div className='mt-4 overflow-hidden'>
                 <Image
                   src='/images/tri-vo-ItwNHDcO590-unsplash.jpg'
                   alt='Dulashi Kongahawaththa - Fashion Design Lecturer'
@@ -47,13 +64,14 @@ export default function About() {
               </div>
             </div>
 
+            {/* Description */}
             <div className='max-w-2xl md:col-span-7 md:col-start-6'>
               <p className='text-xl leading-relaxed tracking-[-0.02em] md:text-2xl lg:text-3xl'>
                 Exploring fashion through creativity, craftsmanship and
                 contemporary design.
               </p>
 
-              <div className='mt-7 space-y-4 text-sm leading-relaxed text-muted-foreground md:text-base'>
+              <div className='mt-6 space-y-3 text-sm leading-relaxed text-muted-foreground md:text-base'>
                 <p>
                   Dulashi Kongahawaththa is a Fashion Design Lecturer with a
                   passion for creative exploration, thoughtful design and the
@@ -79,14 +97,15 @@ export default function About() {
           </div>
 
           {/* Approach */}
-          <div className='border-t border-border/40 py-10 md:py-14'>
-            <div className='grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12'>
+          <div className='border-t border-border/40 py-8 md:py-10'>
+            <div className='grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10'>
+              {/* Image */}
               <div className='md:col-span-4'>
                 <span className='text-[10px] uppercase tracking-[0.2em] text-muted-foreground'>
                   Approach
                 </span>
 
-                <div className='mt-5 overflow-hidden'>
+                <div className='mt-4 overflow-hidden'>
                   <Image
                     src='/images/tri-vo-ItwNHDcO590-unsplash.jpg'
                     alt='Dulashi Kongahawaththa - Fashion Design Approach'
@@ -97,15 +116,16 @@ export default function About() {
                 </div>
               </div>
 
+              {/* Approach items */}
               <div className='md:col-span-7 md:col-start-6'>
-                <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
+                <div className='grid grid-cols-1 gap-x-8 gap-y-7 sm:grid-cols-2'>
                   {/* 01 */}
                   <div className='border-t border-border/40 pt-3'>
                     <span className='text-[10px] uppercase tracking-[0.2em] text-muted-foreground'>
                       01
                     </span>
 
-                    <h2 className='mt-3 text-lg font-medium'>
+                    <h2 className='mt-2 text-lg font-medium'>
                       Creative Direction
                     </h2>
 
@@ -121,7 +141,7 @@ export default function About() {
                       02
                     </span>
 
-                    <h2 className='mt-3 text-lg font-medium'>Craftsmanship</h2>
+                    <h2 className='mt-2 text-lg font-medium'>Craftsmanship</h2>
 
                     <p className='mt-2 text-sm leading-relaxed text-muted-foreground'>
                       Exploring materials, construction and detail to create
@@ -135,7 +155,7 @@ export default function About() {
                       03
                     </span>
 
-                    <h2 className='mt-3 text-lg font-medium'>
+                    <h2 className='mt-2 text-lg font-medium'>
                       Contemporary Design
                     </h2>
 
@@ -151,7 +171,7 @@ export default function About() {
                       04
                     </span>
 
-                    <h2 className='mt-3 text-lg font-medium'>Education</h2>
+                    <h2 className='mt-2 text-lg font-medium'>Education</h2>
 
                     <p className='mt-2 text-sm leading-relaxed text-muted-foreground'>
                       Supporting emerging designers through creative thinking,
@@ -164,7 +184,7 @@ export default function About() {
           </div>
 
           {/* Closing statement */}
-          <div className='border-t border-border/40 pt-10 md:pt-14'>
+          <div className='border-t border-border/40 pt-8 md:pt-10'>
             <p className='max-w-3xl text-[clamp(2rem,4vw,4rem)] font-medium leading-[0.95] -tracking-wider'>
               Fashion is a continuous conversation between ideas, materials,
               people and culture.

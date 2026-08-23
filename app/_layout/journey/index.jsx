@@ -151,7 +151,6 @@ export function Journey() {
               w-full
               max-w-[350px]
               overflow-hidden
-              rounded-3xl
               border
               border-white/10
               bg-black
