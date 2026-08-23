@@ -7,7 +7,7 @@ export function NavbarBrand() {
     <div className='group flex cursor-pointer pb-5'>
       <div className='relative ms-2 flex overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-expo group-hover:pe-8'>
         {/* <h5 className='ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
-          DULASHI KONGAHAWATTA
+          DULASHI KONGAHAWATHTHA
         </h5> */}
       </div>
     </div>

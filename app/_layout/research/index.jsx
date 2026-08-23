@@ -111,7 +111,7 @@ export function Research() {
                 </div>
 
                 <div>
-                  <h3 className='text-xs font-semibold uppercase leading-tight tracking-tight text-white md:text-sm'>
+                  <h3 className='text-xs font-medium leading-tight tracking-tight text-white md:text-sm'>
                     {item.title}
                   </h3>
                 </div>

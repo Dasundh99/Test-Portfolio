@@ -39,7 +39,7 @@ export function Header() {
       {/* Top information */}
       <div className='absolute inset-x-8 top-8 z-30 flex items-start justify-between md:inset-x-12 md:top-10'>
         <p className='text-[10px] font-medium uppercase tracking-[0.35em] text-white/70 md:text-xs'>
-          DULASHI KONGAHAWATTA
+          DULASHI KONGAHAWATHTHA
         </p>
       </div>
 
