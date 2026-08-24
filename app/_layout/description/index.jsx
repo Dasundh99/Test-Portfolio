@@ -6,83 +6,137 @@ import Balancer from 'react-wrap-balancer';
 
 import { MagneticButton, ParallaxFade, ParallaxReveal } from '@/components';
 
-import { Wrapper } from '../description/index.styled';
-
-const phrase = 'So, Who am I';
-
 export function Description() {
   return (
-    <article className='relative w-full px-3'>
-      <div
-        className='
-          relative
-          w-full
-          px-6
-          pb-4
-          pt-12
-          sm:px-10
-          md:px-14
-          md:pb-6
-          md:pt-16
-          lg:px-20
-          lg:pb-8
-          lg:pt-20
-        '
-      >
-        <Wrapper>
-          {/* Left - Image */}
-          <div className='w-full lg:w-1/2'>
-            <ParallaxFade>
-              <div className='aspect-[4/5] w-full overflow-hidden bg-muted-foreground'>
-                <img
-                  src='https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/anthony-tran-3Xkms-gMvZg-unsplash.jpg'
-                  alt='Profile'
-                  className='size-full object-cover'
-                />
-              </div>
-            </ParallaxFade>
-          </div>
-
-          {/* Right - Content */}
-          <div className='flex w-full flex-1 flex-col items-center justify-center text-center lg:w-1/2 lg:ps-16'>
-            {/* Heading */}
-            <h2 className='max-w-4xl text-[clamp(2.5rem,5vw,4.5rem)] font-black uppercase leading-[0.98] tracking-[-0.045em] text-black'>
-              <ParallaxReveal paragraph={phrase} />
-            </h2>
-
-            {/* Description */}
-            <ParallaxFade>
-              <Balancer
-                as='p'
-                className='mt-5 max-w-xl text-sm leading-relaxed md:text-base'
-              >
-                I’m a passionate fashion designer who transforms ideas into
-                expressive and contemporary designs. I’m inspired by culture,
-                creativity, and the beauty of individuality, with a focus on
-                creating pieces that feel both distinctive and timeless. My work
-                combines thoughtful details, modern aesthetics, and a strong
-                sense of personal expression.
-              </Balancer>
-            </ParallaxFade>
-
-            {/* About Button */}
+    <article className='container relative py-12 md:py-16 lg:py-20'>
+      <div className='grid grid-cols-1 gap-0 lg:grid-cols-[50%_50%]'>
+        {/* LEFT — IMAGE */}
+        <div className='lg:pr-10 xl:pr-14'>
+          <ParallaxFade>
             <motion.div
-              whileInView={{ y: '-10%' }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, scale: 0.97 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{
-                duration: 0.6,
-                ease: 'easeOut',
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
               }}
-              className='mt-8 flex justify-center'
+              className='
+                group
+                relative
+                min-h-[420px]
+                w-full
+                overflow-hidden
+                bg-black/5
+                md:min-h-[540px]
+                lg:min-h-[620px]
+              '
             >
-              <Link href='/about'>
-                <MagneticButton variant='ghost' size='md' className='px-5'>
-                  About Me
-                </MagneticButton>
-              </Link>
+              <img
+                src='https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/anthony-tran-3Xkms-gMvZg-unsplash.jpg'
+                alt='Fashion design portrait'
+                className='
+                  absolute
+                  inset-0
+                  size-full
+                  object-cover
+                  transition-transform
+                  duration-1000
+                  ease-out
+                  group-hover:scale-[1.04]
+                '
+              />
+
+              <div className='absolute inset-0 bg-black/[0.04]' />
             </motion.div>
+          </ParallaxFade>
+        </div>
+
+        {/* RIGHT — CONTENT */}
+        <div className='mt-10 flex flex-col lg:mt-0 lg:pl-10 xl:pl-14'>
+          <ParallaxFade>
+            <p className='mb-7 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
+              A little about me
+            </p>
+          </ParallaxFade>
+          {/* Heading */}
+          <ParallaxFade>
+            <h2
+              className='
+                max-w-3xl
+                text-[clamp(2.75rem,5vw,4.5rem)]
+                font-black
+                uppercase
+                leading-[0.92]
+                -tracking-wider
+                text-black
+              '
+            >
+              <ParallaxReveal paragraph='So, Who am I' />
+            </h2>
+          </ParallaxFade>
+
+          {/* Description */}
+          <ParallaxFade>
+            <Balancer
+              as='p'
+              className='
+                mt-8
+                max-w-lg
+                text-sm
+                leading-[1.8]
+                text-black/55
+                md:mt-10
+                md:text-[15px]
+              '
+            >
+              I’m a passionate fashion designer who transforms ideas into
+              expressive and contemporary designs. I’m inspired by culture,
+              creativity, and the beauty of individuality, with a focus on
+              creating pieces that feel both distinctive and timeless. My work
+              combines thoughtful details, modern aesthetics, and a strong sense
+              of personal expression.
+            </Balancer>
+          </ParallaxFade>
+
+          {/* Bottom Area */}
+          <div className='mt-10 border-t border-black/10 pt-7 md:mt-12 md:pt-8'>
+            <div className='flex items-center justify-between gap-6'>
+              {/* Supporting text */}
+              <ParallaxFade>
+                <div>
+                  <span className='mb-2 block text-[9px] uppercase tracking-[0.2em] text-black/35'>
+                    Discover more
+                  </span>
+
+                  <p className='max-w-[230px] text-[11px] leading-[1.6] text-black/45'>
+                    Explore my background, creative journey, and approach to
+                    fashion design.
+                  </p>
+                </div>
+              </ParallaxFade>
+
+              {/* About Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.15,
+                  ease: 'easeOut',
+                }}
+                className='shrink-0'
+              >
+                <Link href='/about'>
+                  <MagneticButton variant='ghost' size='md' className='px-5'>
+                    About Me
+                  </MagneticButton>
+                </Link>
+              </motion.div>
+            </div>
           </div>
-        </Wrapper>
+        </div>
       </div>
     </article>
   );

@@ -42,7 +42,7 @@ export function Journey() {
   return (
     <section
       ref={containerRef}
-      className='relative z-10 mt-10 overflow-hidden bg-black px-3 text-white'
+      className='relative z-10 overflow-hidden bg-black px-3 text-white'
     >
       <div className='flex flex-col bg-black'>
         {/* HEADER */}

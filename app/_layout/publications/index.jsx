@@ -30,11 +30,9 @@ const publications = [
 export function Publications() {
   return (
     <article className='container relative py-12 md:py-16 lg:py-20'>
-      <div className='grid grid-cols-1 gap-0 lg:grid-cols-[50%_50%]'>
-        {/* =====================================================
-            LEFT — 60% — IMAGE
-        ===================================================== */}
-        <div className='lg:pr-10 xl:pr-14'>
+      <div className='grid grid-cols-1 gap-12 lg:grid-cols-[48%_52%] lg:gap-16 xl:gap-20'>
+        {/* IMAGE */}
+        <div className='lg:sticky lg:top-10 lg:self-start'>
           <ParallaxFade>
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
@@ -45,14 +43,14 @@ export function Publications() {
                 ease: 'easeOut',
               }}
               className='
+                group
                 relative
-                min-h-[420px]
+                aspect-[4/5]
                 w-full
                 overflow-hidden
-                bg-black/5
-                md:min-h-[560px]
-                lg:h-full
-                lg:min-h-[680px]
+                bg-black/[0.03]
+                md:aspect-[5/6]
+                lg:aspect-[4/5]
               '
             >
               <img
@@ -64,21 +62,17 @@ export function Publications() {
                   size-full
                   object-cover
                   transition-transform
-                  duration-700
-                  hover:scale-105
+                  duration-1000
+                  ease-out
+                  group-hover:scale-[1.04]
                 '
               />
-
-              {/* Subtle overlay */}
-              <div className='absolute inset-0 bg-black/5' />
             </motion.div>
           </ParallaxFade>
         </div>
 
-        {/* =====================================================
-            RIGHT — 40% — PUBLICATIONS
-        ===================================================== */}
-        <div className='mt-10 lg:mt-0 lg:border-l lg:border-black/10 lg:pl-10 xl:pl-14'>
+        {/* PUBLICATIONS */}
+        <div className='lg:pt-2'>
           {/* Main Title */}
           <ParallaxFade>
             <h2 className='max-w-4xl text-[clamp(2.5rem,5vw,4.5rem)] font-black uppercase leading-[0.98] tracking-[-0.045em] text-black'>
@@ -86,8 +80,17 @@ export function Publications() {
             </h2>
           </ParallaxFade>
 
-          {/* Publication Sections */}
-          <div className='mt-10 md:mt-14'>
+          {/* Intro */}
+          <ParallaxFade>
+            <p className='mt-6 max-w-md text-xs leading-relaxed text-black/50 md:text-sm'>
+              Selected research, publications, and academic contributions
+              exploring contemporary approaches to fashion, design, and creative
+              practice.
+            </p>
+          </ParallaxFade>
+
+          {/* Publication List */}
+          <div className='mt-10 space-y-10 md:mt-14 md:space-y-14'>
             {publications.map((publication, index) => (
               <motion.section
                 key={publication.title}
@@ -99,20 +102,16 @@ export function Publications() {
                   delay: index * 0.1,
                   ease: 'easeOut',
                 }}
-                className={`
-                  ${index !== 0 ? 'border-t border-black/10 pt-8 md:pt-10' : ''}
-                  ${index === 0 ? 'pb-8 md:pb-10' : ''}
-                `}
               >
-                {/* Small Title */}
-                <div className='mb-5 flex items-start gap-4'>
+                {/* Publication heading */}
+                <div className='mb-6 flex items-start gap-5'>
                   <span
                     className='
                       pt-0.5
                       text-[10px]
                       font-medium
                       tracking-[0.2em]
-                      text-black/40
+                      text-black/35
                     '
                   >
                     0{index + 1}
@@ -120,6 +119,7 @@ export function Publications() {
 
                   <h3
                     className='
+                      flex-1
                       text-sm
                       font-semibold
                       uppercase
@@ -133,8 +133,8 @@ export function Publications() {
                   </h3>
                 </div>
 
-                {/* Bullet Points */}
-                <ul className='ml-7 space-y-3 md:space-y-3.5'>
+                {/* Points */}
+                <ul className='ml-9 space-y-3 md:space-y-3.5'>
                   {publication.points.map((point, pointIndex) => (
                     <motion.li
                       key={pointIndex}
@@ -148,10 +148,11 @@ export function Publications() {
                       }}
                       className='
                         relative
+                        max-w-xl
                         pl-4
                         text-xs
-                        leading-relaxed
-                        text-black/60
+                        leading-[1.7]
+                        text-black/55
                         md:text-sm
                       '
                     >
@@ -159,10 +160,10 @@ export function Publications() {
                         className='
                           absolute
                           left-0
-                          top-[0.55em]
+                          top-[0.72em]
                           size-1
                           rounded-full
-                          bg-black/50
+                          bg-black/35
                         '
                       />
 
