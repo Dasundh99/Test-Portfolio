@@ -55,7 +55,7 @@ export function Description() {
         {/* RIGHT — CONTENT */}
         <div className='mt-10 flex flex-col lg:mt-0 lg:pl-10 xl:pl-14'>
           <ParallaxFade>
-            <p className='mb-7 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
+            <p className='mb-1 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
               A little about me
             </p>
           </ParallaxFade>

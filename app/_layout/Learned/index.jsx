@@ -63,7 +63,7 @@ export function Learned() {
         {/* HEADER */}
         <header className='mb-14 md:mb-16'>
           <ParallaxFade>
-            <span className='mb-3 block text-[9px] font-medium uppercase tracking-[0.28em] text-black/40'>
+            <span className='mb-7 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
               Professional & Academic Journey
             </span>
           </ParallaxFade>

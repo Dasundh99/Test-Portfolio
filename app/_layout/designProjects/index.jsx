@@ -83,7 +83,7 @@ export function DesignProjects() {
             <ParallaxFade>
               <div className='mb-8 flex items-end justify-between gap-6 md:mb-10'>
                 <div>
-                  <span className='mb-3 block text-[9px] font-medium uppercase tracking-[0.28em] text-white/35'>
+                  <span className='mb-7 text-[10px] font-medium uppercase tracking-[0.2em] text-white/40'>
                     Selected Work
                   </span>
 
