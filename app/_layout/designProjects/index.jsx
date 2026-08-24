@@ -27,31 +27,38 @@ const projectItems = [
 
 const galleryItems = [
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Visual research and initial exploration.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Concept development through experimentation.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Material, form, and visual investigation.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Iterative development and refinement.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Research translated into design decisions.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Exploration of alternative visual directions.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Final refinement of the design approach.',
   },
 ];

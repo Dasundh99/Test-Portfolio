@@ -17,7 +17,7 @@ export function UserDetails({ transformX }) {
           <div className='mb-8 flex items-center gap-4'>
             <div className='relative size-12 overflow-hidden rounded-full'>
               <Image
-                src='/images/ionela-mat-wh6ZDpz65cI-unsplash.jpg'
+                src='https://res.cloudinary.com/d2kn5xts/image/upload/v1787580875/ionela-mat-wh6ZDpz65cI-unsplash.jpg'
                 alt='Profile'
                 fill
                 sizes='48px'

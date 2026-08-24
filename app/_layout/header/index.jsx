@@ -16,7 +16,7 @@ export function Header() {
       {/* Background Image */}
       <div className='absolute inset-0 z-0'>
         <Image
-          src='/images/ionela-mat-wh6ZDpz65cI-unsplash.jpg'
+          src='https://res.cloudinary.com/d2kn5xts/image/upload/v1787580875/ionela-mat-wh6ZDpz65cI-unsplash.jpg'
           alt='Fashion design background'
           fill
           className='object-cover object-center'

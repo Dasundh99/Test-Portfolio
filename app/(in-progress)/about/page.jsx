@@ -54,7 +54,7 @@ export default function About() {
 
               <div className='mt-4 overflow-hidden'>
                 <Image
-                  src='/images/tri-vo-ItwNHDcO590-unsplash.jpg'
+                  src='https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg'
                   alt='Dulashi Kongahawaththa - Fashion Design Lecturer'
                   width={700}
                   height={900}
@@ -107,7 +107,7 @@ export default function About() {
 
                 <div className='mt-4 overflow-hidden'>
                   <Image
-                    src='/images/tri-vo-ItwNHDcO590-unsplash.jpg'
+                    src='https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg'
                     alt='Dulashi Kongahawaththa - Fashion Design Approach'
                     width={700}
                     height={900}

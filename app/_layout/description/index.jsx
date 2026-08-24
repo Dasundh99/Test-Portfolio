@@ -35,7 +35,7 @@ export function Description() {
             <ParallaxFade>
               <div className='aspect-[4/5] w-full overflow-hidden bg-muted-foreground'>
                 <img
-                  src='/images/anthony-tran-3Xkms-gMvZg-unsplash.jpg'
+                  src='https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/anthony-tran-3Xkms-gMvZg-unsplash.jpg'
                   alt='Profile'
                   className='size-full object-cover'
                 />

@@ -177,7 +177,7 @@ export function Journey() {
             }}
           >
             <Image
-              src='/images/tri-vo-ItwNHDcO590-unsplash.jpg'
+              src='https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg'
               alt='Academic journey'
               width={1200}
               height={1600}

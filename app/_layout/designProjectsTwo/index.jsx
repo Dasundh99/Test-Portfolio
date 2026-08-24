@@ -7,51 +7,63 @@ import { ParallaxFade, ParallaxReveal } from '@/components';
 
 const galleryItems = [
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Exploring visual ideas and creative possibilities.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Developing concepts through experimentation.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Investigating materials, forms, and visual language.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Refining ideas through an iterative process.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Connecting research with creative decisions.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Creating thoughtful design outcomes.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Experimenting with different visual approaches.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Building visual narratives through design.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Exploring relationships between image and form.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Turning observations into visual concepts.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Testing new directions and compositions.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     description: 'Developing ideas through a playful process.',
   },
 ];

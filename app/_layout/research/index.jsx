@@ -11,28 +11,32 @@ const researchItems = [
     title: 'Title 1',
     description:
       'A short description for the first research topic. Add your research details and key findings here.',
-    image: '/images/freestocks-_3Q3tsJ01nc-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580872/freestocks-_3Q3tsJ01nc-unsplash.jpg',
   },
   {
     number: '02',
     title: 'Title 2',
     description:
       'A short description for the second research topic. Add your research details and key findings here.',
-    image: '/images/freestocks-_3Q3tsJ01nc-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580872/freestocks-_3Q3tsJ01nc-unsplash.jpg',
   },
   {
     number: '03',
     title: 'Title 3',
     description:
       'A short description for the third research topic. Add your research details and key findings here.',
-    image: '/images/freestocks-_3Q3tsJ01nc-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580872/freestocks-_3Q3tsJ01nc-unsplash.jpg',
   },
   {
     number: '04',
     title: 'Title 4',
     description:
       'A short description for the fourth research topic. Add your research details and key findings here.',
-    image: '/images/freestocks-_3Q3tsJ01nc-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580872/freestocks-_3Q3tsJ01nc-unsplash.jpg',
   },
 ];
 

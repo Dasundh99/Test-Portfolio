@@ -38,32 +38,38 @@ const teachingItems = [
 
 const galleryItems = [
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: GraduationCap,
     description: 'Guiding others through new ideas and possibilities.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: Users,
     description: 'Learning becomes meaningful when it is shared with others.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: MessageCircle,
     description: 'Encouraging conversations that lead to deeper understanding.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: Lightbulb,
     description: 'Turning questions into opportunities for discovery.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: Palette,
     description: 'Exploring creative approaches to teaching and learning.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: BookOpen,
     description:
       'Building knowledge through practice, reflection, and experience.',

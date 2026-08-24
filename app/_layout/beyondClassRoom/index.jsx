@@ -13,27 +13,32 @@ import { ParallaxFade, ParallaxReveal } from '@/components';
 
 const galleryItems = [
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: GraduationCap,
     description: 'Learning through experiences beyond traditional classrooms.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: Users,
     description: 'Connecting with people, ideas, and different perspectives.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: MessageCircle,
     description: 'Learning through conversations, collaboration, and exchange.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: Lightbulb,
     description: 'Discovering new ideas through curiosity and exploration.',
   },
   {
-    image: '/images/tri-vo-ItwNHDcO590-unsplash.jpg',
+    image:
+      'https://res.cloudinary.com/d2kn5xts/image/upload/v1787580877/tri-vo-ItwNHDcO590-unsplash.jpg',
     icon: Palette,
     description: 'Developing creativity through experimentation and making.',
   },
