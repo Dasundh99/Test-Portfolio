@@ -23,71 +23,54 @@ export function Header() {
           priority
         />
 
-        {/* Dark overlay */}
-        <div className='absolute inset-0 bg-black/45' />
-
-        {/* Bottom gradient */}
-        <div className='absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent' />
-
-        {/* Side gradient */}
-        <div className='absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20' />
+        <div className='absolute inset-0 bg-black/20' />
       </div>
 
-      {/* Decorative border */}
-      {/* <div className='pointer-events-none absolute inset-5 z-20 border border-white/20 md:inset-8' /> */}
-
-      {/* Top information */}
-      <div className='absolute inset-x-8 top-8 z-30 flex items-start justify-between md:inset-x-12 md:top-10'>
-        <p className='text-[10px] font-medium uppercase tracking-[0.35em] text-white/70 md:text-xs'>
+      {/* Top Information */}
+      <div className='absolute inset-x-8 top-8 z-30 md:inset-x-12 md:top-10 lg:inset-x-16'>
+        <p className='text-[10px] font-medium uppercase tracking-[0.28em] text-white/75 sm:text-[11px]'>
           DULASHI KONGAHAWATHTHA
         </p>
       </div>
 
       {/* Main Content */}
-      <div className='relative z-10 flex h-full flex-col justify-end pb-10 md:pb-14'>
+      <div className='relative z-10 flex h-full flex-col justify-end px-8 pb-10 md:px-12 md:pb-14 lg:px-16 lg:pb-16'>
         {/* Name */}
-        <div className='px-8 md:px-12'>
-          <h1 className='leading-[0.82] tracking-[-0.055em]'>
-            <span className='block pl-1 text-[4vw] font-light uppercase text-white/80 md:text-[4vw]'>
-              HI, I&apos;M
-            </span>
+        <div>
+          <p className='mb-2 pl-1 text-[11px] font-light uppercase tracking-[0.28em] text-white/70 sm:text-xs'>
+            HI, I&apos;M
+          </p>
 
-            <span className='block text-[9vw] font-medium uppercase md:text-[11vw]'>
-              DULASHI
-            </span>
+          <h1 className='text-[clamp(4.5rem,10vw,11rem)] font-medium uppercase leading-[0.78] tracking-[-0.055em]'>
+            DULASHI
           </h1>
         </div>
 
-        {/* Professional Introduction */}
-        <div className='mt-8 px-8 md:mt-10 md:px-12'>
-          <div className='border-t border-white/20 pt-5'>
-            {/* Centered Roles + Description */}
-            <div className='mx-auto flex max-w-3xl flex-col items-center text-center'>
-              {/* Roles */}
-              <div className='flex flex-wrap items-center justify-center gap-x-4 gap-y-2'>
-                <span className='text-sm font-light uppercase tracking-[0.12em] text-white/80 md:text-base'>
-                  Lecturer
-                </span>
+        {/* Introduction */}
+        <div className='mt-8 max-w-xl md:mt-10'>
+          <div className='flex flex-col gap-2'>
+            <div className='flex items-center gap-3'>
+              <span className='text-[10px] font-medium uppercase tracking-[0.18em] text-white/85 sm:text-[11px]'>
+                Lecturer
+              </span>
 
-                <span className='text-white/30'>•</span>
+              <span className='text-[9px] text-white/40'>•</span>
 
-                <span className='text-sm font-light uppercase tracking-[0.12em] text-white/80 md:text-base'>
-                  Researcher
-                </span>
+              <span className='text-[10px] font-medium uppercase tracking-[0.18em] text-white/85 sm:text-[11px]'>
+                Researcher
+              </span>
 
-                <span className='text-white/30'>•</span>
+              <span className='text-[9px] text-white/40'>•</span>
 
-                <span className='text-sm font-light uppercase tracking-[0.12em] text-white/80 md:text-base'>
-                  Designer
-                </span>
-              </div>
-
-              {/* Description */}
-              <p className='mt-4 max-w-xl text-sm font-light leading-relaxed tracking-wide text-white/60 md:text-base'>
-                Exploring fashion through education, research, and contemporary
-                design.
-              </p>
+              <span className='text-[10px] font-medium uppercase tracking-[0.18em] text-white/85 sm:text-[11px]'>
+                Designer
+              </span>
             </div>
+
+            <p className='max-w-md text-[10px] font-light leading-[1.7] tracking-wide text-white/60 sm:text-[11px] md:text-xs'>
+              Exploring fashion through education, research, and contemporary
+              design.
+            </p>
           </div>
         </div>
       </div>

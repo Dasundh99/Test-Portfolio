@@ -54,11 +54,13 @@ export function Description() {
 
         {/* RIGHT — CONTENT */}
         <div className='mt-10 flex flex-col lg:mt-0 lg:pl-10 xl:pl-14'>
+          {/* Small Label */}
           <ParallaxFade>
             <p className='mb-1 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
               A little about me
             </p>
           </ParallaxFade>
+
           {/* Heading */}
           <ParallaxFade>
             <h2
@@ -101,40 +103,38 @@ export function Description() {
 
           {/* Bottom Area */}
           <div className='mt-10 border-t border-black/10 pt-7 md:mt-12 md:pt-8'>
-            <div className='flex items-center justify-between gap-6'>
-              {/* Supporting text */}
-              <ParallaxFade>
-                <div>
-                  <span className='mb-2 block text-[9px] uppercase tracking-[0.2em] text-black/35'>
-                    Discover more
-                  </span>
+            {/* Supporting text */}
+            <ParallaxFade>
+              <div>
+                <span className='mb-2 block text-[9px] uppercase tracking-[0.2em] text-black/35'>
+                  Discover more
+                </span>
 
-                  <p className='max-w-[230px] text-[11px] leading-[1.6] text-black/45'>
-                    Explore my background, creative journey, and approach to
-                    fashion design.
-                  </p>
-                </div>
-              </ParallaxFade>
+                <p className='max-w-[230px] text-[11px] leading-[1.6] text-black/45'>
+                  Explore my background, creative journey, and approach to
+                  fashion design.
+                </p>
+              </div>
+            </ParallaxFade>
 
-              {/* About Button */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  delay: 0.15,
-                  ease: 'easeOut',
-                }}
-                className='shrink-0'
-              >
-                <Link href='/about'>
-                  <MagneticButton variant='ghost' size='md' className='px-5'>
-                    About Me
-                  </MagneticButton>
-                </Link>
-              </motion.div>
-            </div>
+            {/* About Button — centered to the entire right-side div */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: 0.15,
+                ease: 'easeOut',
+              }}
+              className='mt-6 flex w-full justify-center'
+            >
+              <Link href='/about'>
+                <MagneticButton variant='ghost' size='md' className='px-5'>
+                  About Me
+                </MagneticButton>
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>
