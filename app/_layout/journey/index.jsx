@@ -108,7 +108,6 @@ export function Journey() {
               <span
                 className='
                   text-[10px]
-                  font-medium
                   uppercase
                   tracking-[0.2em]
                   text-white/40
@@ -123,7 +122,6 @@ export function Journey() {
               className='
                 max-w-3xl
                 text-[clamp(3rem,5vw,4rem)]
-                font-extrabold
                 uppercase
                 leading-[0.94]
                 tracking-[-0.04em]
@@ -138,10 +136,10 @@ export function Journey() {
               className='
                 mt-4
                 max-w-md
-                text-[15px]
+                text-[12px]
                 leading-[1.65]
-                text-white/60
-                md:text-base
+                text-white/70
+                md:text-[13px]
               '
               initial={{
                 opacity: 0,
@@ -249,8 +247,6 @@ export function Journey() {
         <div
           className='
             relative
-            border-t
-            border-white/10
             bg-black
             px-6
             py-9
@@ -290,7 +286,6 @@ export function Journey() {
                 <h3
                   className='
                     text-[clamp(1.75rem,3vw,2rem)]
-                    font-semibold
                     leading-[1.1]
                     tracking-[-0.03em]
                     text-white
@@ -352,7 +347,6 @@ export function Journey() {
                       <span
                         className='
                           text-[10px]
-                          font-medium
                           leading-none
                           tracking-[0.2em]
                           text-white/30
@@ -393,7 +387,6 @@ export function Journey() {
                         className='
                           mb-2
                           text-[10px]
-                          font-medium
                           uppercase
                           leading-none
                           tracking-[0.2em]

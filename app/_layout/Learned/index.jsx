@@ -63,7 +63,7 @@ export function Learned() {
         {/* HEADER */}
         <header className='mb-14 md:mb-16'>
           <ParallaxFade>
-            <span className='mb-5 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
+            <span className='mb-5 text-[10px] uppercase tracking-[0.2em] text-black/40'>
               Professional & Academic Journey
             </span>
           </ParallaxFade>
@@ -71,13 +71,12 @@ export function Learned() {
           {/* Main section title */}
           <h2
             className='
-                max-w-3xl
-                text-[clamp(3rem,5vw,4rem)]
-                font-extrabold
-                uppercase
-                leading-[0.94]
-                tracking-[-0.04em]
-                text-black
+              max-w-3xl
+              text-[clamp(3rem,5vw,4rem)]
+              uppercase
+              leading-[0.94]
+              tracking-[-0.04em]
+              text-black
             '
           >
             <ParallaxReveal paragraph={phrase} />
@@ -214,12 +213,11 @@ export function Learned() {
                           : 'top-[calc(50%+76px)]',
                       ].join(' ')}
                     >
-                      {/* Diagram text — intentionally unchanged */}
-                      <span className='text-[8px] font-medium uppercase tracking-[0.2em] text-black/35'>
+                      <span className='text-[8px] uppercase tracking-[0.2em] text-black/35'>
                         {item.duration}
                       </span>
 
-                      <h3 className='mt-2 text-[13px] font-semibold leading-[1.2] tracking-[-0.01em] xl:text-sm'>
+                      <h3 className='mt-2 text-[13px] leading-[1.2] tracking-[-0.01em] xl:text-sm'>
                         {item.title}
                       </h3>
 
@@ -319,12 +317,11 @@ export function Learned() {
 
                   {/* CONTENT */}
                   <div className='relative z-10 ml-[52px] rounded-xl border border-black/[0.07] bg-white p-4 shadow-[0_5px_24px_rgba(0,0,0,0.025)]'>
-                    {/* Diagram text — intentionally unchanged */}
-                    <span className='text-[8px] font-medium uppercase tracking-[0.2em] text-black/35'>
+                    <span className='text-[8px] uppercase tracking-[0.2em] text-black/35'>
                       {item.duration}
                     </span>
 
-                    <h3 className='mt-1.5 text-sm font-semibold leading-tight tracking-[-0.01em]'>
+                    <h3 className='mt-1.5 text-sm leading-tight tracking-[-0.01em]'>
                       {item.title}
                     </h3>
 

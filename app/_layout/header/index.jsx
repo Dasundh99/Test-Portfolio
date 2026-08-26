@@ -38,7 +38,7 @@ export function Header() {
       <div className='relative z-10 flex h-full flex-col justify-end px-8 pb-10 md:px-12 md:pb-14 lg:px-16 lg:pb-16'>
         {/* Name */}
         <div>
-          <p className='mb-2 pl-1 text-[11px] font-light uppercase tracking-[0.28em] text-white/70 sm:text-xs'>
+          <p className='mb-4 pl-1 text-[22px] font-light uppercase tracking-[0.24em] text-white/80 sm:text-[24px]'>
             HI, I&apos;M
           </p>
 

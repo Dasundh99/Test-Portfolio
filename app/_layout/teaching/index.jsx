@@ -88,13 +88,13 @@ export function Teaching() {
             {/* Main Title */}
             <ParallaxFade>
               <h2
-                className='                max-w-3xl
-                text-[clamp(3rem,5vw,4rem)]
-                font-extrabold
-                uppercase
-                leading-[0.94]
-                tracking-[-0.04em]
-                text-white
+                className='
+                  max-w-3xl
+                  text-[clamp(3rem,5vw,4rem)]
+                  uppercase
+                  leading-[0.94]
+                  tracking-[-0.04em]
+                  text-white
                 '
               >
                 <ParallaxReveal paragraph='Teaching Is Where I Grow Alongside Others' />
@@ -172,7 +172,6 @@ export function Teaching() {
                       className='
                         pt-0.5
                         text-[10px]
-                        font-medium
                         tracking-[0.15em]
                         text-white/35
                       '
@@ -185,7 +184,6 @@ export function Teaching() {
                       <h3
                         className='
                           text-xs
-                          font-semibold
                           uppercase
                           leading-tight
                           tracking-tight
@@ -292,7 +290,6 @@ export function Teaching() {
                         right-4
                         top-4
                         text-[9px]
-                        font-medium
                         tracking-[0.2em]
                         text-white/70
                       '
@@ -311,7 +308,7 @@ export function Teaching() {
                       '
                     >
                       <div className='flex items-start gap-3'>
-                        {/* ICON */}
+                        {/* ICON — NO BACKGROUND / BORDER */}
                         <div
                           className='
                             flex
@@ -319,10 +316,6 @@ export function Teaching() {
                             shrink-0
                             items-center
                             justify-center
-                            border
-                            border-white/30
-                            bg-white/10
-                            backdrop-blur-sm
                           '
                         >
                           <Icon

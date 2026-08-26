@@ -85,14 +85,13 @@ export function BeyondClassRoom() {
           <ParallaxFade>
             <h2
               className='
-                            max-w-3xl
+                max-w-3xl
                 text-[clamp(3rem,5vw,4rem)]
-                font-extrabold
                 uppercase
                 leading-[0.94]
                 tracking-[-0.04em]
                 text-black
-            '
+              '
             >
               <ParallaxReveal paragraph='Learning Beyond the Classroom' />
             </h2>
@@ -214,7 +213,6 @@ function GalleryImage({ item, index }) {
           right-4
           top-4
           text-[9px]
-          font-medium
           tracking-[0.2em]
           text-white/70
         '
@@ -226,7 +224,7 @@ function GalleryImage({ item, index }) {
 
       <div className='absolute inset-x-0 bottom-0 p-4 md:p-5'>
         <div className='flex items-start gap-3'>
-          {/* ICON */}
+          {/* ICON — NO BACKGROUND / BORDER */}
 
           <div
             className='
@@ -235,10 +233,6 @@ function GalleryImage({ item, index }) {
               shrink-0
               items-center
               justify-center
-              border
-              border-white/30
-              bg-white/10
-              backdrop-blur-sm
             '
           >
             <Icon size={15} strokeWidth={1.5} className='text-white' />

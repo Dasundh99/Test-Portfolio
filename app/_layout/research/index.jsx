@@ -64,14 +64,13 @@ export function Research() {
               <ParallaxFade>
                 <h2
                   className='
-                                max-w-3xl
-                text-[clamp(3rem,5vw,4rem)]
-                font-extrabold
-                uppercase
-                leading-[0.94]
-                tracking-[-0.04em]
-                text-white
-                '
+                    max-w-3xl
+                    text-[clamp(3rem,5vw,4rem)]
+                    uppercase
+                    leading-[0.94]
+                    tracking-[-0.04em]
+                    text-white
+                  '
                 >
                   <ParallaxReveal paragraph='Research' />
                 </h2>
@@ -115,7 +114,6 @@ export function Research() {
                 px-4
                 py-3
                 text-[9px]
-                font-medium
                 uppercase
                 tracking-[0.18em]
                 text-white/30
@@ -161,7 +159,7 @@ export function Research() {
                 >
                   {/* NUMBER */}
                   <div className='self-start pt-1'>
-                    <span className='text-[10px] font-medium tracking-[0.15em] text-white/30 md:text-xs'>
+                    <span className='text-[10px] tracking-[0.15em] text-white/30 md:text-xs'>
                       {item.number}
                     </span>
                   </div>
@@ -307,7 +305,6 @@ export function Research() {
                               px-2
                               py-1
                               text-[8px]
-                              font-medium
                               uppercase
                               tracking-[0.2em]
                               text-white/80
@@ -325,7 +322,6 @@ export function Research() {
                           <span
                             className='
                               text-[8px]
-                              font-medium
                               uppercase
                               tracking-[0.2em]
                               text-white/40
@@ -335,7 +331,7 @@ export function Research() {
                           </span>
                         </div>
 
-                        <h4 className='text-sm font-medium leading-tight text-white'>
+                        <h4 className='text-sm leading-tight text-white'>
                           {item.title}
                         </h4>
 

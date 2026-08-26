@@ -29,8 +29,8 @@ const publications = [
 
 export function Publications() {
   return (
-    <article className='container relative py-10 md:py-14 lg:py-16'>
-      <div className='grid grid-cols-1 gap-10 lg:grid-cols-[45%_55%] lg:gap-12 xl:gap-16'>
+    <article className='container relative py-8 md:py-10 lg:py-20'>
+      <div className='grid grid-cols-1 gap-7 lg:grid-cols-[45%_55%] lg:gap-8 xl:gap-20'>
         {/* IMAGE */}
         <div className='lg:sticky lg:top-10 lg:self-start'>
           <ParallaxFade>
@@ -80,10 +80,9 @@ export function Publications() {
             <ParallaxFade>
               <span
                 className='
-                  mb-2
+                  mb-1.5
                   block
                   text-[10px]
-                  font-medium
                   uppercase
                   leading-none
                   tracking-[0.2em]
@@ -97,13 +96,12 @@ export function Publications() {
             <ParallaxFade>
               <h2
                 className='
-                                  max-w-3xl
-                text-[clamp(3rem,5vw,4rem)]
-                font-extrabold
-                uppercase
-                leading-[0.94]
-                tracking-[-0.04em]
-                text-black
+                  max-w-3xl
+                  text-[clamp(3rem,5vw,4rem)]
+                  uppercase
+                  leading-[0.94]
+                  tracking-[-0.04em]
+                  text-black
                 '
               >
                 <ParallaxReveal paragraph='Publications' />
@@ -112,7 +110,7 @@ export function Publications() {
           </header>
 
           {/* PUBLICATION ARCHIVE */}
-          <div>
+          <div className='mt-1'>
             {publications.map((publication, index) => (
               <motion.section
                 key={publication.title}
@@ -133,29 +131,36 @@ export function Publications() {
                   delay: index * 0.1,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className='py-6 md:py-7'
+                className='py-4 md:py-5'
               >
                 {/* PUBLICATION TITLE */}
-                <h3
-                  className='
-    max-w-2xl
-    text-[clamp(1rem,1.5vw,1.3rem)]
-    leading-[1.2]
-    tracking-[-0.015em]
-    text-black
-  '
-                >
-                  {publication.title}
-                </h3>
+                <div className='flex items-start gap-2'>
+                  <span className='pt-1 text-[9px] tracking-[0.15em] text-black/30'>
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+
+                  <h3
+                    className='
+                      max-w-2xl
+                      text-[clamp(1rem,1.5vw,1.3rem)]
+                      leading-[1.2]
+                      tracking-[-0.015em]
+                      text-black
+                    '
+                  >
+                    {publication.title}
+                  </h3>
+                </div>
+
                 {/* KEY CONTRIBUTIONS */}
-                <div className='mt-2'>
+                <div className='ml-0 mt-3 md:ml-8'>
                   <div>
                     {publication.points.map((point, pointIndex) => (
                       <motion.div
                         key={pointIndex}
                         initial={{
                           opacity: 0,
-                          x: -6,
+                          x: -8,
                         }}
                         whileInView={{
                           opacity: 1,
@@ -166,41 +171,64 @@ export function Publications() {
                           amount: 0.2,
                         }}
                         transition={{
-                          duration: 0.35,
-                          delay: pointIndex * 0.035,
-                          ease: 'easeOut',
+                          duration: 0.4,
+                          delay: pointIndex * 0.045,
+                          ease: [0.22, 1, 0.36, 1],
                         }}
                         className='
                           group/point
                           flex
-                          gap-4
-                          py-2
-                          first:pt-0
+                          items-start
+                          gap-3
+                          py-1.5
                         '
                       >
-                        <span
+                        {/* NUMBER */}
+                        <div
                           className='
+                            flex
+                            size-[25px]
                             shrink-0
-                            pt-[3px]
-                            text-[10px]
-                            font-medium
-                            leading-none
-                            tracking-[0.12em]
-                            text-black/30
+                            items-center
+                            justify-center
+                            rounded-full
+                            border
+                            border-black/10
+                            bg-white
+                            transition-all
+                            duration-300
+                            group-hover/point:border-black
+                            group-hover/point:bg-black
                           '
                         >
-                          {String(pointIndex + 1).padStart(2, '0')}
-                        </span>
+                          <span
+                            className='
+                              text-[8px]
+                              font-medium
+                              tracking-[0.08em]
+                              text-black/45
+                              transition-colors
+                              duration-300
+                              group-hover/point:text-white
+                            '
+                          >
+                            {String(pointIndex + 1).padStart(2, '0')}
+                          </span>
+                        </div>
 
+                        {/* POINT TEXT */}
                         <p
                           className='
                             max-w-xl
-                            text-[14px]
-                            leading-[1.6]
+                            pt-[2px]
+                            text-[13px]
+                            leading-normal
                             text-black/55
-                            transition-colors
+                            transition-all
                             duration-300
-                            group-hover/point:text-black/80
+                            group-hover/point:translate-x-1
+                            group-hover/point:text-black
+                            md:text-[14px]
                           '
                         >
                           {point}

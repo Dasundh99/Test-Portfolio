@@ -75,7 +75,7 @@ const gridClasses = [
 
 export function DesignProjects() {
   return (
-    <article className='relative overflow-hidden bg-black py-16 text-white md:py-20 lg:py-24'>
+    <article className='relative overflow-hidden bg-black py-16 text-white md:py-20 lg:py-20'>
       <div className='container relative'>
         <div className='grid grid-cols-1 gap-14 lg:grid-cols-[1.55fr_1fr] lg:gap-16 xl:gap-20'>
           {/* LEFT — VISUAL PROJECT GALLERY */}
@@ -83,19 +83,19 @@ export function DesignProjects() {
             <ParallaxFade>
               <div className='mb-8 flex items-end justify-between gap-6 md:mb-10'>
                 <div>
-                  <span className='mb-7 text-[10px] font-medium uppercase tracking-[0.2em] text-white/40'>
+                  <span className='mb-7 text-[10px] uppercase tracking-[0.2em] text-white/40'>
                     Selected Work
                   </span>
 
                   <h2
-                    className='               
-                max-w-3xl
-                text-[clamp(3rem,5vw,4rem)]
-                font-extrabold
-                uppercase
-                leading-[0.94]
-                tracking-[-0.04em]
-                text-white'
+                    className='
+                      max-w-3xl
+                      text-[clamp(3rem,5vw,4rem)]
+                      uppercase
+                      leading-[0.94]
+                      tracking-[-0.04em]
+                      text-white
+                    '
                   >
                     <ParallaxReveal paragraph='Design Projects' />
                   </h2>
@@ -186,7 +186,6 @@ export function DesignProjects() {
                       top-3
                       z-10
                       text-[8px]
-                      font-medium
                       tracking-[0.22em]
                       text-white/45
                       transition-colors
@@ -280,14 +279,14 @@ export function DesignProjects() {
                 >
                   {/* NUMBER */}
                   <div>
-                    <span className='text-[9px] font-medium tracking-[0.2em] text-white/30 transition-colors duration-300 group-hover:text-white/70'>
+                    <span className='text-[9px] tracking-[0.2em] text-white/30 transition-colors duration-300 group-hover:text-white/70'>
                       {item.number}
                     </span>
                   </div>
 
                   {/* PROJECT DETAILS */}
                   <div>
-                    <h3 className='text-[15px] font-medium uppercase leading-[1.1] tracking-[-0.01em] text-white md:text-base'>
+                    <h3 className='text-[15px] uppercase leading-[1.1] tracking-[-0.01em] text-white md:text-base'>
                       {item.title}
                     </h3>
 

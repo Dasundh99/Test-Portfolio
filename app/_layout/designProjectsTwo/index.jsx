@@ -93,14 +93,13 @@ export function DesignProjectsTwo() {
             <h2
               className='
                 text-[2vw]
-                font-black
                 uppercase
                 leading-[1.05]
                 tracking-tight
                 text-white
               '
             >
-              <ParallaxReveal paragraph='Continues' />
+              <ParallaxReveal paragraph='Continues . . .' />
             </h2>
           </div>
         </ParallaxFade>
@@ -189,7 +188,6 @@ export function DesignProjectsTwo() {
                   top-2
                   z-10
                   text-[8px]
-                  font-medium
                   tracking-[0.2em]
                   text-white/70
                   transition-colors
@@ -284,7 +282,6 @@ export function DesignProjectsTwo() {
               className='
                 overflow-hidden
                 text-xs
-                font-medium
                 uppercase
                 tracking-[0.18em]
                 text-white

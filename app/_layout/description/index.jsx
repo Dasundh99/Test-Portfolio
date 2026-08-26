@@ -67,7 +67,6 @@ export function Description() {
               className='
                 max-w-3xl
                 text-[clamp(3rem,5vw,4rem)]
-                font-extrabold
                 uppercase
                 leading-[0.94]
                 tracking-[-0.04em]
@@ -114,11 +113,11 @@ export function Description() {
             {/* Supporting Text */}
             <ParallaxFade>
               <div>
-                <span className='mb-2 block text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
+                <span className='mb-2 block text-[10px] font-medium uppercase tracking-[0.2em] text-black/60'>
                   Discover more
                 </span>
 
-                <p className='max-w-[250px] text-[12px] leading-[1.65] text-black/50'>
+                <p className='max-w-[250px] text-[10px] leading-[1.65] text-black/50'>
                   Explore my background, creative journey, and approach to
                   fashion design.
                 </p>
