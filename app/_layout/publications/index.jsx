@@ -29,8 +29,8 @@ const publications = [
 
 export function Publications() {
   return (
-    <article className='container relative py-12 md:py-16 lg:py-20'>
-      <div className='grid grid-cols-1 gap-12 lg:grid-cols-[48%_52%] lg:gap-16 xl:gap-20'>
+    <article className='container relative py-10 md:py-14 lg:py-16'>
+      <div className='grid grid-cols-1 gap-10 lg:grid-cols-[45%_55%] lg:gap-12 xl:gap-16'>
         {/* IMAGE */}
         <div className='lg:sticky lg:top-10 lg:self-start'>
           <ParallaxFade>
@@ -67,110 +67,148 @@ export function Publications() {
                   group-hover:scale-[1.04]
                 '
               />
+
+              <div className='pointer-events-none absolute inset-0 bg-black/[0.08]' />
             </motion.div>
           </ParallaxFade>
         </div>
 
         {/* PUBLICATIONS */}
-        <div className='lg:pt-2'>
-          {/* Main Title */}
-          <ParallaxFade>
-            <h2 className='max-w-4xl text-[clamp(2.5rem,5vw,4.5rem)] font-black uppercase leading-[0.98] tracking-[-0.045em] text-black'>
-              <ParallaxReveal paragraph='Publications' />
-            </h2>
-          </ParallaxFade>
+        <div className='lg:pt-0'>
+          {/* HEADER */}
+          <header>
+            <ParallaxFade>
+              <span
+                className='
+                  mb-2
+                  block
+                  text-[10px]
+                  font-medium
+                  uppercase
+                  leading-none
+                  tracking-[0.2em]
+                  text-black/40
+                '
+              >
+                Selected Academic Work
+              </span>
+            </ParallaxFade>
 
-          {/* Intro */}
-          <ParallaxFade>
-            <p className='mt-6 max-w-md text-xs leading-relaxed text-black/50 md:text-sm'>
-              Selected research, publications, and academic contributions
-              exploring contemporary approaches to fashion, design, and creative
-              practice.
-            </p>
-          </ParallaxFade>
+            <ParallaxFade>
+              <h2
+                className='
+                                  max-w-3xl
+                text-[clamp(3rem,5vw,4rem)]
+                font-extrabold
+                uppercase
+                leading-[0.94]
+                tracking-[-0.04em]
+                text-black
+                '
+              >
+                <ParallaxReveal paragraph='Publications' />
+              </h2>
+            </ParallaxFade>
+          </header>
 
-          {/* Publication List */}
-          <div className='mt-10 space-y-10 md:mt-14 md:space-y-14'>
+          {/* PUBLICATION ARCHIVE */}
+          <div>
             {publications.map((publication, index) => (
               <motion.section
                 key={publication.title}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{
-                  duration: 0.55,
-                  delay: index * 0.1,
-                  ease: 'easeOut',
+                initial={{
+                  opacity: 0,
+                  y: 20,
                 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.15,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className='py-6 md:py-7'
               >
-                {/* Publication heading */}
-                <div className='mb-6 flex items-start gap-5'>
-                  <span
-                    className='
-                      pt-0.5
-                      text-[10px]
-                      font-medium
-                      tracking-[0.2em]
-                      text-black/35
-                    '
-                  >
-                    0{index + 1}
-                  </span>
-
-                  <h3
-                    className='
-                      flex-1
-                      text-sm
-                      font-semibold
-                      uppercase
-                      leading-tight
-                      tracking-tight
-                      text-black
-                      md:text-base
-                    '
-                  >
-                    {publication.title}
-                  </h3>
-                </div>
-
-                {/* Points */}
-                <ul className='ml-9 space-y-3 md:space-y-3.5'>
-                  {publication.points.map((point, pointIndex) => (
-                    <motion.li
-                      key={pointIndex}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true, amount: 0.3 }}
-                      transition={{
-                        duration: 0.35,
-                        delay: pointIndex * 0.04,
-                        ease: 'easeOut',
-                      }}
-                      className='
-                        relative
-                        max-w-xl
-                        pl-4
-                        text-xs
-                        leading-[1.7]
-                        text-black/55
-                        md:text-sm
-                      '
-                    >
-                      <span
+                {/* PUBLICATION TITLE */}
+                <h3
+                  className='
+    max-w-2xl
+    text-[clamp(1rem,1.5vw,1.3rem)]
+    leading-[1.2]
+    tracking-[-0.015em]
+    text-black
+  '
+                >
+                  {publication.title}
+                </h3>
+                {/* KEY CONTRIBUTIONS */}
+                <div className='mt-2'>
+                  <div>
+                    {publication.points.map((point, pointIndex) => (
+                      <motion.div
+                        key={pointIndex}
+                        initial={{
+                          opacity: 0,
+                          x: -6,
+                        }}
+                        whileInView={{
+                          opacity: 1,
+                          x: 0,
+                        }}
+                        viewport={{
+                          once: true,
+                          amount: 0.2,
+                        }}
+                        transition={{
+                          duration: 0.35,
+                          delay: pointIndex * 0.035,
+                          ease: 'easeOut',
+                        }}
                         className='
-                          absolute
-                          left-0
-                          top-[0.72em]
-                          size-1
-                          rounded-full
-                          bg-black/35
+                          group/point
+                          flex
+                          gap-4
+                          py-2
+                          first:pt-0
                         '
-                      />
+                      >
+                        <span
+                          className='
+                            shrink-0
+                            pt-[3px]
+                            text-[10px]
+                            font-medium
+                            leading-none
+                            tracking-[0.12em]
+                            text-black/30
+                          '
+                        >
+                          {String(pointIndex + 1).padStart(2, '0')}
+                        </span>
 
-                      {point}
-                    </motion.li>
-                  ))}
-                </ul>
+                        <p
+                          className='
+                            max-w-xl
+                            text-[14px]
+                            leading-[1.6]
+                            text-black/55
+                            transition-colors
+                            duration-300
+                            group-hover/point:text-black/80
+                          '
+                        >
+                          {point}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </motion.section>
             ))}
           </div>

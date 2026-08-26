@@ -63,19 +63,30 @@ export function Learned() {
         {/* HEADER */}
         <header className='mb-14 md:mb-16'>
           <ParallaxFade>
-            <span className='mb-7 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
+            <span className='mb-5 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
               Professional & Academic Journey
             </span>
           </ParallaxFade>
 
-          <h2 className='max-w-4xl text-[clamp(2.5rem,5vw,4.5rem)] font-black uppercase leading-[0.98] tracking-[-0.045em] text-black'>
+          {/* Main section title */}
+          <h2
+            className='
+                max-w-3xl
+                text-[clamp(3rem,5vw,4rem)]
+                font-extrabold
+                uppercase
+                leading-[0.94]
+                tracking-[-0.04em]
+                text-black
+            '
+          >
             <ParallaxReveal paragraph={phrase} />
           </h2>
         </header>
 
         {/* DESKTOP JOURNEY */}
         <div className='relative hidden lg:block'>
-          <div className='relative mx-auto h-[520px] w-full'>
+          <div className='relative mx-auto h-[400px] w-full'>
             {/* ROAD */}
             <div className='absolute inset-x-0 top-1/2 z-0 h-[38px] -translate-y-1/2'>
               <div className='absolute inset-0 rounded-full bg-black/[0.025]' />
@@ -203,6 +214,7 @@ export function Learned() {
                           : 'top-[calc(50%+76px)]',
                       ].join(' ')}
                     >
+                      {/* Diagram text — intentionally unchanged */}
                       <span className='text-[8px] font-medium uppercase tracking-[0.2em] text-black/35'>
                         {item.duration}
                       </span>
@@ -307,6 +319,7 @@ export function Learned() {
 
                   {/* CONTENT */}
                   <div className='relative z-10 ml-[52px] rounded-xl border border-black/[0.07] bg-white p-4 shadow-[0_5px_24px_rgba(0,0,0,0.025)]'>
+                    {/* Diagram text — intentionally unchanged */}
                     <span className='text-[8px] font-medium uppercase tracking-[0.2em] text-black/35'>
                       {item.duration}
                     </span>

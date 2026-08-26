@@ -54,9 +54,9 @@ export function Description() {
 
         {/* RIGHT — CONTENT */}
         <div className='mt-10 flex flex-col lg:mt-0 lg:pl-10 xl:pl-14'>
-          {/* Small Label */}
+          {/* Section Label */}
           <ParallaxFade>
-            <p className='mb-1 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
+            <p className='mb-2 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
               A little about me
             </p>
           </ParallaxFade>
@@ -66,11 +66,11 @@ export function Description() {
             <h2
               className='
                 max-w-3xl
-                text-[clamp(2.75rem,5vw,4.5rem)]
-                font-black
+                text-[clamp(3rem,5vw,4rem)]
+                font-extrabold
                 uppercase
-                leading-[0.92]
-                -tracking-wider
+                leading-[0.94]
+                tracking-[-0.04em]
                 text-black
               '
             >
@@ -78,46 +78,54 @@ export function Description() {
             </h2>
           </ParallaxFade>
 
-          {/* Description */}
+          {/* Main Description */}
           <ParallaxFade>
             <Balancer
               as='p'
               className='
                 mt-8
                 max-w-lg
-                text-sm
+                text-[14px]
+                font-normal
                 leading-[1.8]
-                text-black/55
+                text-black/60
                 md:mt-10
-                md:text-[15px]
               '
             >
-              I’m a passionate fashion designer who transforms ideas into
-              expressive and contemporary designs. I’m inspired by culture,
-              creativity, and the beauty of individuality, with a focus on
-              creating pieces that feel both distinctive and timeless. My work
-              combines thoughtful details, modern aesthetics, and a strong sense
-              of personal expression.
+              My creative practice is rooted in a curiosity about fashion,
+              culture, materials, and the ways in which clothing can communicate
+              ideas and identity. I am interested in exploring how traditional
+              influences, contemporary aesthetics, and thoughtful design
+              processes can come together to create meaningful visual
+              expressions.
+              <br />
+              <br />
+              Alongside design, I value research and education as important
+              parts of the creative process. My work explores textiles, surface
+              qualities, craftsmanship, cultural references, and evolving
+              approaches to contemporary fashion. Through teaching and research,
+              I enjoy encouraging experimentation, critical thinking, and a
+              deeper understanding of design.
             </Balancer>
           </ParallaxFade>
 
           {/* Bottom Area */}
           <div className='mt-10 border-t border-black/10 pt-7 md:mt-12 md:pt-8'>
-            {/* Supporting text */}
+            {/* Supporting Text */}
             <ParallaxFade>
               <div>
-                <span className='mb-2 block text-[9px] uppercase tracking-[0.2em] text-black/35'>
+                <span className='mb-2 block text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
                   Discover more
                 </span>
 
-                <p className='max-w-[230px] text-[11px] leading-[1.6] text-black/45'>
+                <p className='max-w-[250px] text-[12px] leading-[1.65] text-black/50'>
                   Explore my background, creative journey, and approach to
                   fashion design.
                 </p>
               </div>
             </ParallaxFade>
 
-            {/* About Button — centered to the entire right-side div */}
+            {/* About Button */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -130,7 +138,11 @@ export function Description() {
               className='mt-6 flex w-full justify-center'
             >
               <Link href='/about'>
-                <MagneticButton variant='ghost' size='md' className='px-5'>
+                <MagneticButton
+                  variant='ghost'
+                  size='md'
+                  className='px-5 text-sm'
+                >
                   About Me
                 </MagneticButton>
               </Link>

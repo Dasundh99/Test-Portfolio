@@ -87,7 +87,16 @@ export function DesignProjects() {
                     Selected Work
                   </span>
 
-                  <h2 className='max-w-3xl text-[clamp(2.7rem,5vw,4.8rem)] font-black uppercase leading-[0.92] -tracking-wider text-white'>
+                  <h2
+                    className='               
+                max-w-3xl
+                text-[clamp(3rem,5vw,4rem)]
+                font-extrabold
+                uppercase
+                leading-[0.94]
+                tracking-[-0.04em]
+                text-white'
+                  >
                     <ParallaxReveal paragraph='Design Projects' />
                   </h2>
                 </div>
@@ -146,26 +155,25 @@ export function DesignProjects() {
                       size-full
                       object-cover
                       grayscale-[15%]
-                      transition-all
-                      duration-1000
+                      transition-transform
+                      duration-700
                       ease-out
-                      group-hover:scale-[1.04]
-                      group-hover:grayscale-0
+                      group-hover:scale-105
                     '
                   />
 
-                  {/* SUBTLE OVERLAY */}
+                  {/* DARK GRADIENT OVERLAY */}
                   <div
                     className='
                       absolute
                       inset-0
                       bg-gradient-to-t
-                      from-black/75
-                      via-black/5
+                      from-black/80
+                      via-black/10
                       to-transparent
-                      opacity-70
+                      opacity-40
                       transition-opacity
-                      duration-700
+                      duration-500
                       group-hover:opacity-100
                     '
                   />
@@ -176,6 +184,7 @@ export function DesignProjects() {
                       absolute
                       right-3
                       top-3
+                      z-10
                       text-[8px]
                       font-medium
                       tracking-[0.22em]
@@ -190,9 +199,33 @@ export function DesignProjects() {
                     {String(index + 1).padStart(2, '0')}
                   </span>
 
-                  {/* DESCRIPTION */}
-                  <div className='absolute inset-x-0 bottom-0 p-3.5 md:p-4'>
-                    <p className='max-w-[220px] text-[9px] leading-[1.6] text-white/75 md:text-[10px]'>
+                  {/* IMAGE LABEL / DESCRIPTION */}
+                  <div
+                    className='
+                      absolute
+                      inset-x-0
+                      bottom-0
+                      z-10
+                      translate-y-2
+                      p-3.5
+                      opacity-0
+                      transition-all
+                      duration-500
+                      ease-out
+                      group-hover:translate-y-0
+                      group-hover:opacity-100
+                      md:p-4
+                    '
+                  >
+                    <p
+                      className='
+                        max-w-[220px]
+                        text-[9px]
+                        leading-[1.6]
+                        text-white/90
+                        md:text-[10px]
+                      '
+                    >
                       {item.description}
                     </p>
                   </div>
@@ -264,8 +297,6 @@ export function DesignProjects() {
 
                     {/* PROJECT INDICATOR */}
                     <div className='mt-5 flex items-center gap-2'>
-                      <span className='h-px w-5 bg-white/25 transition-all duration-500 group-hover:w-10 group-hover:bg-white/70' />
-
                       <span className='text-[7px] uppercase tracking-[0.2em] text-white/25 transition-colors duration-300 group-hover:text-white/50'>
                         Project {item.number}
                       </span>

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Eye } from 'lucide-react';
 import Balancer from 'react-wrap-balancer';
 
 import { ParallaxFade, ParallaxReveal } from '@/components';
@@ -61,7 +62,17 @@ export function Research() {
           <div className='lg:pr-10'>
             <div className='lg:sticky lg:top-24'>
               <ParallaxFade>
-                <h2 className='max-w-4xl text-[clamp(2.5rem,5vw,4.5rem)] font-black uppercase leading-[0.98] tracking-[-0.045em] text-white'>
+                <h2
+                  className='
+                                max-w-3xl
+                text-[clamp(3rem,5vw,4rem)]
+                font-extrabold
+                uppercase
+                leading-[0.94]
+                tracking-[-0.04em]
+                text-white
+                '
+                >
                   <ParallaxReveal paragraph='Research' />
                 </h2>
               </ParallaxFade>
@@ -228,32 +239,24 @@ export function Research() {
                           z-10
                           flex
                           items-center
-                          gap-1.5
+                          justify-center
                           rounded-full
                           border
                           border-white/20
                           bg-black/45
-                          px-2
-                          py-1
+                          p-1.5
                           backdrop-blur-md
+                          transition-all
+                          duration-300
+                          group-hover/image:border-white/40
+                          group-hover/image:bg-black/60
                         '
                       >
-                        {/* MAGNIFYING GLASS */}
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          stroke='currentColor'
-                          strokeWidth='1.8'
-                          className='size-2.5 text-white/90'
-                        >
-                          <circle cx='11' cy='11' r='6' />
-                          <path
-                            strokeLinecap='round'
-                            strokeLinejoin='round'
-                            d='m16 16 4 4'
-                          />
-                        </svg>
+                        <Eye
+                          size={11}
+                          strokeWidth={1.5}
+                          className='text-white/90'
+                        />
                       </div>
                     </div>
 

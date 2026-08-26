@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { BookOpen, PencilRuler, Search } from 'lucide-react';
 import Image from 'next/image';
 
 import { slideUp } from './variants';
@@ -46,28 +47,49 @@ export function Header() {
           </h1>
         </div>
 
-        {/* Introduction */}
-        <div className='mt-8 max-w-xl md:mt-10'>
-          <div className='flex flex-col gap-2'>
-            <div className='flex items-center gap-3'>
-              <span className='text-[10px] font-medium uppercase tracking-[0.18em] text-white/85 sm:text-[11px]'>
-                Lecturer
-              </span>
+        {/* Centered Introduction */}
+        <div className='mt-10 flex w-full justify-center md:mt-12'>
+          <div className='flex max-w-md flex-col items-center gap-4 text-center'>
+            {/* Roles */}
+            <div className='flex flex-wrap items-center justify-center gap-x-4 gap-y-3'>
+              {/* Lecturer */}
+              <div className='flex items-center gap-2'>
+                <BookOpen
+                  size={12}
+                  strokeWidth={1.4}
+                  className='text-white/55'
+                />
 
-              <span className='text-[9px] text-white/40'>•</span>
+                <span className='text-[10px] font-medium uppercase tracking-[0.2em] text-white/85 sm:text-[11px]'>
+                  Lecturer
+                </span>
+              </div>
 
-              <span className='text-[10px] font-medium uppercase tracking-[0.18em] text-white/85 sm:text-[11px]'>
-                Researcher
-              </span>
+              {/* Researcher */}
+              <div className='flex items-center gap-2'>
+                <Search size={12} strokeWidth={1.4} className='text-white/55' />
 
-              <span className='text-[9px] text-white/40'>•</span>
+                <span className='text-[10px] font-medium uppercase tracking-[0.2em] text-white/85 sm:text-[11px]'>
+                  Researcher
+                </span>
+              </div>
 
-              <span className='text-[10px] font-medium uppercase tracking-[0.18em] text-white/85 sm:text-[11px]'>
-                Designer
-              </span>
+              {/* Designer */}
+              <div className='flex items-center gap-2'>
+                <PencilRuler
+                  size={12}
+                  strokeWidth={1.4}
+                  className='text-white/55'
+                />
+
+                <span className='text-[10px] font-medium uppercase tracking-[0.2em] text-white/85 sm:text-[11px]'>
+                  Designer
+                </span>
+              </div>
             </div>
 
-            <p className='max-w-md text-[10px] font-light leading-[1.7] tracking-wide text-white/60 sm:text-[11px] md:text-xs'>
+            {/* Description */}
+            <p className='max-w-sm text-center text-[10px] font-light leading-[1.7] tracking-[0.02em] text-white/60 sm:text-[11px]'>
               Exploring fashion through education, research, and contemporary
               design.
             </p>
