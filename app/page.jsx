@@ -17,7 +17,7 @@ import {
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Home | Your Portfolio',
+  title: 'Home | Dulashi Kongahawaththa',
   description:
     'This is a placeholder description for my portfolio. Replace this with your own professional summary.',
 };

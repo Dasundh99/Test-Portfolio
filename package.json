@@ -1,9 +1,9 @@
 {
   "name": "dulashi-portfolio",
-  "title": "Your Portfolio",
+  "title": "dulashi Portfolio",
   "description": "This is a placeholder description for my portfolio.",
   "author": {
-    "name": "Your Name",
+    "name": "dulashi Name",
     "email": "your@email.com",
     "url": "https://github.com"
   },

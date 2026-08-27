@@ -62,25 +62,30 @@ export function Learned() {
       <div className='container relative z-10'>
         {/* HEADER */}
         <header className='mb-14 md:mb-16'>
+          {/* Section Label */}
           <ParallaxFade>
-            <span className='mb-5 text-[10px] uppercase tracking-[0.2em] text-black/40'>
+            <span className='mb-5 block text-[10px] uppercase tracking-[0.2em] text-black/40'>
               Professional & Academic Journey
             </span>
           </ParallaxFade>
 
-          {/* Main section title */}
-          <h2
-            className='
-              max-w-3xl
-              text-[clamp(3rem,5vw,4rem)]
-              uppercase
-              leading-[0.94]
-              tracking-[-0.04em]
-              text-black
-            '
-          >
-            <ParallaxReveal paragraph={phrase} />
-          </h2>
+          {/* Main Section Title */}
+          <ParallaxFade>
+            <h2
+              className='
+                max-w-3xl
+                overflow-visible
+                py-[0.08em]
+                text-[clamp(3rem,5vw,4rem)]
+                uppercase
+                leading-none
+                tracking-[-0.04em]
+                text-black
+              '
+            >
+              <ParallaxReveal paragraph={phrase} />
+            </h2>
+          </ParallaxFade>
         </header>
 
         {/* DESKTOP JOURNEY */}
@@ -213,17 +218,34 @@ export function Learned() {
                           : 'top-[calc(50%+76px)]',
                       ].join(' ')}
                     >
-                      <span className='text-[8px] uppercase tracking-[0.2em] text-black/35'>
-                        {item.duration}
-                      </span>
+                      <ParallaxFade>
+                        <span className='text-[8px] uppercase tracking-[0.2em] text-black/35'>
+                          {item.duration}
+                        </span>
+                      </ParallaxFade>
 
-                      <h3 className='mt-2 text-[13px] leading-[1.2] tracking-[-0.01em] xl:text-sm'>
-                        {item.title}
-                      </h3>
+                      {/* Journey Title */}
+                      <ParallaxFade>
+                        <h3
+                          className='
+                            mt-2
+                            overflow-visible
+                            py-[0.05em]
+                            text-[13px]
+                            leading-[1.15]
+                            tracking-[-0.01em]
+                            xl:text-sm
+                          '
+                        >
+                          <ParallaxReveal paragraph={item.title} />
+                        </h3>
+                      </ParallaxFade>
 
-                      <p className='mt-2 text-[10px] leading-[1.65] text-black/50'>
-                        {item.description}
-                      </p>
+                      <ParallaxFade>
+                        <p className='mt-2 text-[10px] leading-[1.65] text-black/50'>
+                          {item.description}
+                        </p>
+                      </ParallaxFade>
                     </div>
 
                     {/* CONNECTOR */}
@@ -317,17 +339,33 @@ export function Learned() {
 
                   {/* CONTENT */}
                   <div className='relative z-10 ml-[52px] rounded-xl border border-black/[0.07] bg-white p-4 shadow-[0_5px_24px_rgba(0,0,0,0.025)]'>
-                    <span className='text-[8px] uppercase tracking-[0.2em] text-black/35'>
-                      {item.duration}
-                    </span>
+                    <ParallaxFade>
+                      <span className='text-[8px] uppercase tracking-[0.2em] text-black/35'>
+                        {item.duration}
+                      </span>
+                    </ParallaxFade>
 
-                    <h3 className='mt-1.5 text-sm leading-tight tracking-[-0.01em]'>
-                      {item.title}
-                    </h3>
+                    {/* Mobile Journey Title */}
+                    <ParallaxFade>
+                      <h3
+                        className='
+                          mt-1.5
+                          overflow-visible
+                          py-[0.05em]
+                          text-sm
+                          leading-[1.1]
+                          tracking-[-0.01em]
+                        '
+                      >
+                        <ParallaxReveal paragraph={item.title} />
+                      </h3>
+                    </ParallaxFade>
 
-                    <p className='mt-2 text-[10px] leading-[1.7] text-black/50'>
-                      {item.description}
-                    </p>
+                    <ParallaxFade>
+                      <p className='mt-2 text-[10px] leading-[1.7] text-black/50'>
+                        {item.description}
+                      </p>
+                    </ParallaxFade>
                   </div>
                 </motion.div>
               );

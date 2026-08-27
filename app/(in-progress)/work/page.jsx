@@ -3,7 +3,7 @@ import { Transition } from '@/layout';
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Work | Your Portfolio',
+  title: 'Work | Dulashi Kongahawaththa',
   description:
     'This is a placeholder description for my portfolio. Replace this with your own professional summary.',
 };

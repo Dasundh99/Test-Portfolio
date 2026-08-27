@@ -1,14 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
-import { MagneticButton, ParallaxFade, ParallaxReveal } from '@/components';
+import { ParallaxFade, ParallaxReveal } from '@/components';
 
 export function Description() {
   return (
-    <article className='container relative py-12 md:py-16 lg:py-20'>
+    <article className='container relative py-20 md:py-24 lg:py-32'>
       <div className='grid grid-cols-1 gap-0 lg:grid-cols-[50%_50%]'>
         {/* LEFT — IMAGE */}
         <div className='lg:pr-10 xl:pr-14'>
@@ -27,6 +28,7 @@ export function Description() {
                 min-h-[420px]
                 w-full
                 overflow-hidden
+                rounded-2xl
                 bg-black/5
                 md:min-h-[540px]
                 lg:min-h-[620px]
@@ -53,22 +55,24 @@ export function Description() {
         </div>
 
         {/* RIGHT — CONTENT */}
-        <div className='mt-10 flex flex-col lg:mt-0 lg:pl-10 xl:pl-14'>
-          {/* Section Label */}
+        <div className='mt-12 flex flex-col lg:mt-0 lg:pl-10 xl:pl-14'>
+          {/* SECTION LABEL */}
           <ParallaxFade>
-            <p className='mb-2 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
+            <p className='mb-3 text-[10px] font-medium uppercase tracking-[0.2em] text-black/40'>
               A little about me
             </p>
           </ParallaxFade>
 
-          {/* Heading */}
+          {/* HEADING */}
           <ParallaxFade>
             <h2
               className='
                 max-w-3xl
+                overflow-visible
+                py-[0.08em]
                 text-[clamp(3rem,5vw,4rem)]
                 uppercase
-                leading-[0.94]
+                leading-none
                 tracking-[-0.04em]
                 text-black
               '
@@ -77,18 +81,18 @@ export function Description() {
             </h2>
           </ParallaxFade>
 
-          {/* Main Description */}
+          {/* MAIN DESCRIPTION */}
           <ParallaxFade>
             <Balancer
               as='p'
               className='
-                mt-8
+                mt-9
                 max-w-lg
                 text-[14px]
                 font-normal
                 leading-[1.8]
                 text-black/60
-                md:mt-10
+                md:mt-11
               '
             >
               My creative practice is rooted in a curiosity about fashion,
@@ -108,9 +112,9 @@ export function Description() {
             </Balancer>
           </ParallaxFade>
 
-          {/* Bottom Area */}
-          <div className='mt-10 border-t border-black/10 pt-7 md:mt-12 md:pt-8'>
-            {/* Supporting Text */}
+          {/* BOTTOM AREA */}
+          <div className='mt-12 border-t border-black/10 pt-8 md:mt-14 md:pt-9'>
+            {/* SUPPORTING TEXT */}
             <ParallaxFade>
               <div>
                 <span className='mb-2 block text-[10px] font-medium uppercase tracking-[0.2em] text-black/60'>
@@ -124,7 +128,7 @@ export function Description() {
               </div>
             </ParallaxFade>
 
-            {/* About Button */}
+            {/* ABOUT ME BUTTON */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -134,16 +138,31 @@ export function Description() {
                 delay: 0.15,
                 ease: 'easeOut',
               }}
-              className='mt-6 flex w-full justify-center'
+              className='mt-7 flex w-full justify-center'
             >
-              <Link href='/about'>
-                <MagneticButton
-                  variant='ghost'
-                  size='md'
-                  className='px-5 text-sm'
-                >
-                  About Me
-                </MagneticButton>
+              <Link
+                href='/about'
+                className='
+                  group
+                  inline-flex
+                  items-center
+                  gap-3
+                  rounded-full
+                  border
+                  border-black/30
+                  px-5
+                  py-2.5
+                  text-[10px]
+                  uppercase
+                  tracking-[0.18em]
+                  text-black
+                  transition-all
+                  duration-300
+                  hover:bg-black
+                  hover:text-white
+                '
+              >
+                <span>About Me</span>
               </Link>
             </motion.div>
           </div>

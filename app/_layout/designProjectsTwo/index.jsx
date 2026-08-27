@@ -85,18 +85,23 @@ const gridClasses = [
 
 export function DesignProjectsTwo() {
   return (
-    <article className='relative bg-black py-12 text-white md:py-16 lg:py-20'>
+    <article className='relative bg-neutral-200 py-12 text-black md:py-16 lg:py-20'>
       <div className='container relative'>
-        {/* PAGE TITLE */}
+        {/* =====================================================
+            PAGE TITLE
+        ===================================================== */}
         <ParallaxFade>
           <div className='mb-10 md:mb-14 lg:mb-16'>
             <h2
               className='
-                text-[2vw]
+                overflow-visible
+                py-2
+                text-[11px]
                 uppercase
-                leading-[1.05]
-                tracking-tight
-                text-white
+                leading-[1.1]
+                tracking-[0.2em]
+                text-black/50
+                md:text-xs
               '
             >
               <ParallaxReveal paragraph='Continues . . .' />
@@ -104,7 +109,9 @@ export function DesignProjectsTwo() {
           </div>
         </ParallaxFade>
 
-        {/* IMAGE GRID */}
+        {/* =====================================================
+            IMAGE GRID
+        ===================================================== */}
         <div
           className='
             grid
@@ -124,7 +131,7 @@ export function DesignProjectsTwo() {
               key={`${item.image}-${index}`}
               initial={{
                 opacity: 0,
-                y: 30,
+                y: 20,
               }}
               whileInView={{
                 opacity: 1,
@@ -135,16 +142,17 @@ export function DesignProjectsTwo() {
                 amount: 0.1,
               }}
               transition={{
-                duration: 0.6,
-                delay: index * 0.04,
-                ease: 'easeOut',
+                duration: 0.7,
+                delay: index * 0.06,
+                ease: [0.22, 1, 0.36, 1],
               }}
               className={`
                 group
                 relative
                 min-h-0
                 overflow-hidden
-                bg-white/5
+                rounded-xl
+                bg-white
                 ${gridClasses[index]}
               `}
             >
@@ -164,7 +172,7 @@ export function DesignProjectsTwo() {
                 '
               />
 
-              {/* OVERLAY */}
+              {/* BLACK FADE OVERLAY */}
               <div
                 className='
                   absolute
@@ -213,6 +221,7 @@ export function DesignProjectsTwo() {
                   opacity-0
                   transition-all
                   duration-500
+                  ease-out
                   group-hover:translate-y-0
                   group-hover:opacity-100
                   md:p-4
@@ -220,11 +229,11 @@ export function DesignProjectsTwo() {
               >
                 <p
                   className='
-                    max-w-xs
+                    max-w-[220px]
                     text-[9px]
-                    leading-relaxed
+                    leading-[1.6]
                     text-white/90
-                    md:text-xs
+                    md:text-[10px]
                   '
                 >
                   {item.description}
@@ -234,7 +243,9 @@ export function DesignProjectsTwo() {
           ))}
         </div>
 
-        {/* BOTTOM CONTENT */}
+        {/* =====================================================
+            BOTTOM CONTENT
+        ===================================================== */}
         <div
           className='
             mt-12
@@ -248,12 +259,12 @@ export function DesignProjectsTwo() {
             <ParallaxFade>
               <motion.div
                 whileHover={{
-                  scale: 1.08,
-                  rotate: 5,
+                  scale: 1.05,
+                  rotate: 3,
                 }}
                 transition={{
-                  duration: 0.3,
-                  ease: 'easeOut',
+                  duration: 0.4,
+                  ease: [0.22, 1, 0.36, 1],
                 }}
                 className='
                   mb-4
@@ -263,48 +274,54 @@ export function DesignProjectsTwo() {
                   justify-center
                   rounded-full
                   border
-                  border-white/10
-                  bg-white/[0.03]
-                  text-white/55
+                  border-black/10
+                  bg-black/[0.03]
+                  text-black/45
                   transition-colors
                   duration-300
-                  hover:border-white/25
-                  hover:bg-white/[0.06]
-                  hover:text-white
+                  hover:border-black/20
+                  hover:bg-black/[0.06]
+                  hover:text-black
                 '
               >
                 <Pencil size={16} strokeWidth={1.4} />
               </motion.div>
             </ParallaxFade>
 
-            {/* TITLE — SAME REVEAL AS "CONTINUES" */}
-            <div
-              className='
-                overflow-hidden
-                text-xs
-                uppercase
-                tracking-[0.18em]
-                text-white
-                md:text-sm
-              '
-            >
-              <ParallaxReveal paragraph='Designing Through Exploration' />
-            </div>
+            {/* TITLE */}
+            <ParallaxFade>
+              <div
+                className='
+                  overflow-visible
+                  py-1
+                  text-xs
+                  uppercase
+                  tracking-[0.18em]
+                  text-black
+                  md:text-sm
+                '
+              >
+                <ParallaxReveal paragraph='Designing Through Exploration' />
+              </div>
+            </ParallaxFade>
 
-            {/* DESCRIPTION — SAME REVEAL STYLE */}
-            <div
-              className='
-                mt-3
-                max-w-xl
-                overflow-hidden
-                text-[11px]
-                leading-[1.75]
-                text-white/45
-                md:text-xs
-              '
-            >
-              <ParallaxReveal paragraph='A collection of visual experiments, material studies, and creative explorations developed through observation, experimentation, and an ongoing process of making.' />
-            </div>
+            {/* DESCRIPTION */}
+            <ParallaxFade>
+              <div
+                className='
+                  mt-3
+                  max-w-xl
+                  overflow-visible
+                  py-1
+                  text-[11px]
+                  leading-[1.75]
+                  text-black/45
+                  md:text-xs
+                '
+              >
+                <ParallaxReveal paragraph='A collection of visual experiments, material studies, and creative explorations developed through observation, experimentation, and an ongoing process of making.' />
+              </div>
+            </ParallaxFade>
           </div>
         </div>
       </div>

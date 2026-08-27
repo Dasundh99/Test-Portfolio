@@ -47,28 +47,28 @@ const galleryItems = [
 export function BeyondClassRoom() {
   return (
     <article className='container relative py-12 md:py-16 lg:py-20'>
-      {/* =====================================================
-          2 ROW × 3 COLUMN GRID
-
-          ROW 1:
-          [ IMAGE ] [ TITLE + DESCRIPTION ] [ IMAGE ]
-
-          ROW 2:
-          [ IMAGE ] [ IMAGE ]             [ IMAGE ]
-      ===================================================== */}
-
       <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-3'>
         {/* CELL 01 — IMAGE */}
-
         <GalleryImage item={galleryItems[0]} index={0} />
 
         {/* CELL 02 — TITLE + DESCRIPTION */}
-
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 0.7,
+            ease: [0.22, 1, 0.36, 1],
+          }}
           className='
             flex
             aspect-[4/3]
@@ -82,10 +82,13 @@ export function BeyondClassRoom() {
             lg:p-8
           '
         >
+          {/* MAIN TITLE */}
           <ParallaxFade>
             <h2
               className='
                 max-w-3xl
+                overflow-visible
+                py-2
                 text-[clamp(3rem,5vw,4rem)]
                 uppercase
                 leading-[0.94]
@@ -97,16 +100,17 @@ export function BeyondClassRoom() {
             </h2>
           </ParallaxFade>
 
+          {/* DESCRIPTION */}
           <ParallaxFade>
             <p
               className='
                 mt-5
                 max-w-md
-                text-xs
-                leading-relaxed
+                text-[11px]
+                leading-[1.65]
                 text-black/55
                 md:mt-6
-                md:text-sm
+                md:text-[13px]
               '
             >
               Learning does not end when the classroom does. Every experience,
@@ -118,19 +122,15 @@ export function BeyondClassRoom() {
         </motion.div>
 
         {/* CELL 03 — IMAGE */}
-
         <GalleryImage item={galleryItems[1]} index={1} />
 
         {/* CELL 04 — IMAGE */}
-
         <GalleryImage item={galleryItems[2]} index={2} />
 
         {/* CELL 05 — IMAGE */}
-
         <GalleryImage item={galleryItems[3]} index={3} />
 
         {/* CELL 06 — IMAGE */}
-
         <GalleryImage item={galleryItems[4]} index={4} />
       </div>
     </article>
@@ -148,7 +148,7 @@ function GalleryImage({ item, index }) {
     <motion.div
       initial={{
         opacity: 0,
-        y: 25,
+        y: 20,
       }}
       whileInView={{
         opacity: 1,
@@ -159,15 +159,16 @@ function GalleryImage({ item, index }) {
         amount: 0.15,
       }}
       transition={{
-        duration: 0.6,
+        duration: 0.7,
         delay: index * 0.08,
-        ease: 'easeOut',
+        ease: [0.22, 1, 0.36, 1],
       }}
       className='
         group
         relative
         aspect-[4/3]
         overflow-hidden
+        rounded-xl
         bg-black/5
       '
     >
@@ -222,32 +223,52 @@ function GalleryImage({ item, index }) {
 
       {/* IMAGE CONTENT */}
 
-      <div className='absolute inset-x-0 bottom-0 p-4 md:p-5'>
-        <div className='flex items-start gap-3'>
-          {/* ICON — NO BACKGROUND / BORDER */}
+      <div
+        className='
+          absolute
+          inset-x-0
+          bottom-0
+          flex
+          justify-center
+          p-3
+          md:p-4
+        '
+      >
+        {/* ICON + TEXT */}
+
+        <div
+          className='
+            flex
+            w-fit
+            max-w-full
+            items-center
+            justify-center
+            gap-2.5
+          '
+        >
+          {/* ICON */}
 
           <div
             className='
               flex
-              size-8
+              size-7
               shrink-0
               items-center
               justify-center
             '
           >
-            <Icon size={15} strokeWidth={1.5} className='text-white' />
+            <Icon size={13} strokeWidth={1.5} className='text-white' />
           </div>
 
           {/* DESCRIPTION */}
 
           <p
             className='
-              max-w-xs
-              pt-1
-              text-xs
-              leading-relaxed
-              text-white/90
-              md:text-sm
+              text-center
+              text-[10px]
+              leading-normal
+              text-white/85
+              md:text-[11px]
             '
           >
             {item.description}

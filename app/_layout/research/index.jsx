@@ -55,31 +55,45 @@ const researchItems = [
 
 export function Research() {
   return (
-    <article className='relative w-full bg-black py-12 text-white md:py-16 lg:py-20'>
-      <div className='container'>
-        <div className='grid grid-cols-1 lg:grid-cols-[26%_74%]'>
-          {/* LEFT — INTRO */}
+    <article className='relative w-full overflow-visible bg-neutral-200 py-12 text-black md:py-16 lg:py-20'>
+      <div className='container overflow-visible'>
+        <div className='grid grid-cols-1 overflow-visible lg:grid-cols-[26%_74%]'>
+          {/* =====================================================
+              LEFT — INTRO
+          ===================================================== */}
           <div className='lg:pr-10'>
             <div className='lg:sticky lg:top-24'>
+              {/* SECTION TITLE */}
               <ParallaxFade>
                 <h2
                   className='
                     max-w-3xl
+                    overflow-visible
+                    py-[0.08em]
                     text-[clamp(3rem,5vw,4rem)]
                     uppercase
-                    leading-[0.94]
+                    leading-none
                     tracking-[-0.04em]
-                    text-white
+                    text-black
                   '
                 >
                   <ParallaxReveal paragraph='Research' />
                 </h2>
               </ParallaxFade>
 
+              {/* DESCRIPTION */}
               <ParallaxFade>
                 <Balancer
                   as='p'
-                  className='mt-6 max-w-xs text-[13px] leading-[1.75] text-white/50 md:text-sm'
+                  className='
+                    mt-8
+                    max-w-lg
+                    text-[14px]
+                    font-normal
+                    leading-[1.8]
+                    text-black/65
+                    md:mt-10
+                  '
                 >
                   Research is an essential part of my creative and academic
                   practice, providing a foundation for exploring ideas,
@@ -101,247 +115,308 @@ export function Research() {
             </div>
           </div>
 
-          {/* RIGHT — RESEARCH TABLE */}
-          <div className='mt-10 lg:mt-0 lg:pl-8'>
-            {/* TABLE HEADER */}
-            <div
-              className='
-                hidden
-                grid-cols-[48px_0.7fr_1.5fr_150px]
-                gap-5
-                border-y
-                border-white/10
-                px-4
-                py-3
-                text-[9px]
-                uppercase
-                tracking-[0.18em]
-                text-white/30
-                md:grid
-              '
-            >
-              <span>No.</span>
-              <span>Research Area</span>
-              <span>Description</span>
-              <span>Visual</span>
-            </div>
-
-            {/* TABLE ROWS */}
-            <div className='relative'>
+          {/* =====================================================
+              RIGHT — RESEARCH CARDS
+          ===================================================== */}
+          <div className='mt-10 overflow-visible lg:mt-0 lg:pl-8'>
+            <div className='grid grid-cols-1 gap-3 overflow-visible'>
               {researchItems.map((item, index) => (
-                <motion.div
+                <motion.article
                   key={item.number}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
+                  initial={{
+                    opacity: 0,
+                    y: 15,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.15,
+                  }}
                   transition={{
-                    duration: 0.45,
-                    delay: index * 0.05,
-                    ease: 'easeOut',
+                    duration: 0.5,
+                    delay: index * 0.06,
+                    ease: [0.22, 1, 0.36, 1],
                   }}
                   className='
                     group
                     relative
-                    grid
-                    grid-cols-[32px_1fr_110px]
-                    items-center
-                    gap-4
-                    border-b
-                    border-white/10
-                    px-4
-                    py-5
+                    overflow-visible
+                    rounded-xl
+                    border
+                    border-black/5
+                    bg-white
                     transition-all
                     duration-500
-                    md:grid-cols-[48px_0.7fr_1.5fr_150px]
-                    md:gap-5
-                    md:py-6
+                    hover:-translate-y-1
+                    hover:border-black/10
+                    hover:shadow-[0_18px_45px_rgba(0,0,0,0.08)]
                   '
                 >
-                  {/* NUMBER */}
-                  <div className='self-start pt-1'>
-                    <span className='text-[10px] tracking-[0.15em] text-white/30 md:text-xs'>
-                      {item.number}
-                    </span>
-                  </div>
-
-                  {/* TITLE */}
-                  <div className='self-start'>
-                    <h3 className='text-sm leading-tight tracking-[-0.015em] text-white md:text-[15px]'>
-                      {item.title}
-                    </h3>
-                  </div>
-
-                  {/* DESCRIPTION */}
-                  <div className='col-span-3 col-start-2 mt-1 self-start md:col-span-1 md:col-start-auto md:mt-0'>
-                    <Balancer
-                      as='p'
-                      className='max-w-lg text-[11px] leading-[1.7] text-white/45 md:text-xs'
-                    >
-                      {item.description}
-                    </Balancer>
-                  </div>
-
-                  {/* IMAGE */}
+                  {/* =================================================
+                      CARD CLIPPING LAYER
+                      Only clips the circle animation.
+                  ================================================= */}
                   <div
                     className='
-                      group/image
-                      relative
-                      col-start-3
-                      row-start-1
-                      aspect-[4/3]
-                      w-full
-                      md:col-start-4
+                      pointer-events-none
+                      absolute
+                      inset-0
+                      z-0
+                      overflow-hidden
+                      rounded-xl
                     '
                   >
-                    {/* TABLE IMAGE */}
+                    {/* TOP-LEFT CIRCLE */}
                     <div
                       className='
-                        relative
-                        size-full
-                        cursor-pointer
-                        overflow-hidden
-                        bg-neutral-900
+                        absolute
+                        -left-10
+                        -top-10
+                        size-20
+                        rounded-full
+                        bg-black/[0.035]
+                        transition-transform
+                        duration-700
+                        ease-out
+                        group-hover:scale-[2.8]
                       '
-                    >
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className='
-                          size-full
-                          object-cover
-                          transition-transform
-                          duration-700
-                          ease-out
-                          group-hover/image:scale-105
-                        '
-                      />
+                    />
+                  </div>
 
-                      {/* DARK HOVER OVERLAY */}
-                      <div
-                        className='
-                          absolute
-                          inset-0
-                          bg-black/0
-                          transition-all
-                          duration-300
-                          group-hover/image:bg-black/25
-                        '
-                      />
+                  {/* =================================================
+                      CARD CONTENT
+                  ================================================= */}
+                  <div
+                    className='
+                      relative
+                      z-10
+                      grid
+                      grid-cols-1
+                      gap-4
+                      p-4
+                      md:grid-cols-[1fr_145px]
+                      md:items-center
+                      md:p-5
+                    '
+                  >
+                    {/* CARD TEXT */}
+                    <div className='flex flex-col'>
+                      {/* NUMBER */}
+                      <div className='mb-4'>
+                        <span
+                          className='
+                            text-[9px]
+                            tracking-[0.2em]
+                            text-black/30
+                            transition-colors
+                            duration-300
+                            group-hover:text-black/60
+                          '
+                        >
+                          {item.number}
+                        </span>
+                      </div>
 
-                      {/* PREVIEW INDICATOR */}
-                      <div
+                      {/* TITLE */}
+                      <ParallaxFade>
+                        <h3
+                          className='
+                            max-w-xl
+                            overflow-visible
+                            py-[0.05em]
+                            text-[clamp(1rem,1.5vw,1.25rem)]
+                            leading-[1.1]
+                            tracking-[-0.035em]
+                            text-black
+                          '
+                        >
+                          <ParallaxReveal paragraph={item.title} />
+                        </h3>
+                      </ParallaxFade>
+
+                      {/* DESCRIPTION */}
+                      <Balancer
+                        as='p'
                         className='
-                          absolute
-                          bottom-2
-                          left-2
-                          z-10
-                          flex
-                          items-center
-                          justify-center
-                          rounded-full
-                          border
-                          border-white/20
-                          bg-black/45
-                          p-1.5
-                          backdrop-blur-md
-                          transition-all
-                          duration-300
-                          group-hover/image:border-white/40
-                          group-hover/image:bg-black/60
+                          mt-2.5
+                          max-w-xl
+                          text-[10px]
+                          leading-[1.65]
+                          text-black/50
+                          md:text-[11px]
                         '
                       >
-                        <Eye
-                          size={11}
-                          strokeWidth={1.5}
-                          className='text-white/90'
-                        />
-                      </div>
+                        {item.description}
+                      </Balancer>
                     </div>
 
-                    {/* LARGE IMAGE PREVIEW */}
+                    {/* =================================================
+                        IMAGE + PREVIEW
+                    ================================================= */}
                     <div
                       className='
-                        pointer-events-none
-                        absolute
-                        right-full
-                        top-1/2
-                        z-[999]
-                        mr-6
-                        hidden
-                        w-[390px]
-                        -translate-y-1/2
-                        translate-x-5
-                        scale-90
-                        overflow-hidden
-                        rounded-sm
-                        bg-neutral-950
-                        opacity-0
-                        shadow-[0_30px_100px_rgba(0,0,0,0.8)]
-                        transition-all
-                        duration-500
-                        ease-out
-                        group-hover/image:translate-x-0
-                        group-hover/image:scale-100
-                        group-hover/image:opacity-100
-                        md:block
+                        group/image
+                        relative
+                        z-20
+                        aspect-[4/3]
+                        w-full
                       '
                     >
-                      {/* PREVIEW IMAGE */}
-                      <div className='relative aspect-[4/3] w-full overflow-hidden'>
+                      {/* IMAGE */}
+                      <div
+                        className='
+                          relative
+                          size-full
+                          overflow-hidden
+                          rounded-lg
+                          bg-neutral-100
+                        '
+                      >
                         <img
                           src={item.image}
                           alt={item.title}
-                          className='size-full object-cover'
+                          className='
+                            size-full
+                            object-cover
+                            transition-transform
+                            duration-700
+                            ease-out
+                            group-hover/image:scale-105
+                          '
                         />
 
-                        {/* NUMBER */}
-                        <div className='absolute left-4 top-4'>
-                          <span
-                            className='
-                              inline-flex
-                              border
-                              border-white/30
-                              bg-black/30
-                              px-2
-                              py-1
-                              text-[8px]
-                              uppercase
-                              tracking-[0.2em]
-                              text-white/80
-                              backdrop-blur-sm
-                            '
-                          >
-                            {item.number}
-                          </span>
+                        {/* IMAGE OVERLAY */}
+                        <div
+                          className='
+                            pointer-events-none
+                            absolute
+                            inset-0
+                            bg-black/0
+                            transition-all
+                            duration-500
+                            group-hover/image:bg-black/10
+                          '
+                        />
+
+                        {/* =================================================
+                            SMALL PREVIEW INDICATOR
+                        ================================================= */}
+                        <div
+                          className='
+                            absolute
+                            bottom-2
+                            left-2
+                            z-30
+                            flex
+                            size-5
+                            items-center
+                            justify-center
+                            rounded-full
+                            bg-black/25
+                            text-white/65
+                            backdrop-blur-sm
+                            transition-all
+                            duration-300
+                            group-hover/image:bg-black/40
+                            group-hover/image:text-white
+                          '
+                        >
+                          <Eye size={8} strokeWidth={1.4} />
                         </div>
                       </div>
 
-                      {/* PREVIEW CONTENT */}
-                      <div className='border-t border-white/10 px-5 py-4'>
-                        <div className='mb-2'>
+                      {/* =================================================
+                          HOVER PREVIEW POPUP
+                      ================================================= */}
+                      <div
+                        className='
+                          pointer-events-none
+                          absolute
+                          right-[calc(100%+20px)]
+                          top-1/2
+                          z-[9999]
+                          hidden
+                          w-[360px]
+                          -translate-y-1/2
+                          translate-x-5
+                          scale-95
+                          overflow-hidden
+                          rounded-lg
+                          bg-white
+                          opacity-0
+                          shadow-[0_30px_80px_rgba(0,0,0,0.18)]
+                          transition-all
+                          duration-500
+                          ease-out
+                          group-hover/image:translate-x-0
+                          group-hover/image:scale-100
+                          group-hover/image:opacity-100
+                          md:block
+                        '
+                      >
+                        {/* PREVIEW IMAGE */}
+                        <div className='relative aspect-[4/3] w-full overflow-hidden'>
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className='
+                              size-full
+                              object-cover
+                            '
+                          />
+                        </div>
+
+                        {/* PREVIEW CONTENT */}
+                        <div
+                          className='
+                            border-t
+                            border-black/10
+                            bg-white
+                            px-5
+                            py-4
+                          '
+                        >
                           <span
                             className='
                               text-[8px]
                               uppercase
                               tracking-[0.2em]
-                              text-white/40
+                              text-black/40
                             '
                           >
                             {item.tag}
                           </span>
+
+                          <h4
+                            className='
+                              mt-2
+                              text-sm
+                              leading-tight
+                              text-black
+                            '
+                          >
+                            {item.title}
+                          </h4>
+
+                          <p
+                            className='
+                              mt-2
+                              max-w-[320px]
+                              text-[10px]
+                              leading-[1.6]
+                              text-black/50
+                            '
+                          >
+                            {item.previewDescription}
+                          </p>
                         </div>
-
-                        <h4 className='text-sm leading-tight text-white'>
-                          {item.title}
-                        </h4>
-
-                        <p className='mt-2 max-w-[320px] text-[10px] leading-[1.6] text-white/45'>
-                          {item.previewDescription}
-                        </p>
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </motion.article>
               ))}
             </div>
           </div>

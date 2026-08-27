@@ -75,26 +75,33 @@ const gridClasses = [
 
 export function DesignProjects() {
   return (
-    <article className='relative overflow-hidden bg-black py-16 text-white md:py-20 lg:py-20'>
+    <article className='relative overflow-hidden bg-neutral-200 py-16 text-black md:py-20 lg:py-20'>
       <div className='container relative'>
         <div className='grid grid-cols-1 gap-14 lg:grid-cols-[1.55fr_1fr] lg:gap-16 xl:gap-20'>
-          {/* LEFT — VISUAL PROJECT GALLERY */}
+          {/* =====================================================
+              LEFT — VISUAL PROJECT GALLERY
+          ===================================================== */}
           <div>
+            {/* SECTION HEADER */}
             <ParallaxFade>
               <div className='mb-8 flex items-end justify-between gap-6 md:mb-10'>
                 <div>
-                  <span className='mb-7 text-[10px] uppercase tracking-[0.2em] text-white/40'>
+                  {/* SECTION LABEL */}
+                  <span className='mb-7 block text-[10px] uppercase tracking-[0.2em] text-black/40'>
                     Selected Work
                   </span>
 
+                  {/* MAIN TITLE */}
                   <h2
                     className='
                       max-w-3xl
+                      overflow-visible
+                      py-2
                       text-[clamp(3rem,5vw,4rem)]
                       uppercase
                       leading-[0.94]
                       tracking-[-0.04em]
-                      text-white
+                      text-black
                     '
                   >
                     <ParallaxReveal paragraph='Design Projects' />
@@ -103,7 +110,9 @@ export function DesignProjects() {
               </div>
             </ParallaxFade>
 
-            {/* GALLERY */}
+            {/* =================================================
+                GALLERY
+            ================================================= */}
             <div
               className='
                 grid
@@ -141,7 +150,8 @@ export function DesignProjects() {
                     relative
                     min-h-0
                     overflow-hidden
-                    bg-white/[0.04]
+                    rounded-xl
+                    bg-black/[0.04]
                     ${gridClasses[index]}
                   `}
                 >
@@ -198,7 +208,7 @@ export function DesignProjects() {
                     {String(index + 1).padStart(2, '0')}
                   </span>
 
-                  {/* IMAGE LABEL / DESCRIPTION */}
+                  {/* IMAGE LABEL */}
                   <div
                     className='
                       absolute
@@ -233,17 +243,33 @@ export function DesignProjects() {
             </div>
           </div>
 
-          {/* RIGHT — PROJECT INFORMATION */}
+          {/* =====================================================
+              RIGHT — PROJECT INFORMATION
+          ===================================================== */}
           <div className='lg:pt-[5.7rem]'>
-            <div className='mb-8 hidden lg:block'>
-              <p className='max-w-sm text-xs leading-[1.8] text-white/40'>
-                A selection of fashion design projects developed through
-                research, experimentation, material exploration, and conceptual
-                development.
-              </p>
-            </div>
+            {/* INTRO */}
+            <ParallaxFade>
+              <div className='mb-8 hidden lg:block'>
+                <p
+                  className='
+                    max-w-sm
+                    text-[11px]
+                    leading-[1.8]
+                    text-black/45
+                    md:text-[12px]
+                  '
+                >
+                  A selection of fashion design projects developed through
+                  research, experimentation, material exploration, and
+                  conceptual development.
+                </p>
+              </div>
+            </ParallaxFade>
 
-            <div className='border-t border-white/15'>
+            {/* =================================================
+                PROJECT CARDS
+            ================================================= */}
+            <div className='space-y-3'>
               {projectItems.map((item, index) => (
                 <motion.div
                   key={item.number}
@@ -260,46 +286,104 @@ export function DesignProjects() {
                     amount: 0.25,
                   }}
                   transition={{
-                    duration: 0.65,
+                    duration: 0.7,
                     delay: index * 0.1,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                   className='
                     group
-                    grid
-                    grid-cols-[36px_1fr]
-                    gap-4
-                    border-b
-                    border-white/10
-                    py-7
-                    md:grid-cols-[42px_1fr]
-                    md:gap-5
-                    md:py-9
+                    relative
+                    overflow-hidden
+                    rounded-xl
+                    border
+                    border-black/5
+                    bg-white
+                    p-5
+                    transition-all
+                    duration-500
+                    hover:-translate-y-1
+                    hover:border-black/10
+                    hover:shadow-[0_18px_45px_rgba(0,0,0,0.08)]
+                    md:p-6
                   '
                 >
-                  {/* NUMBER */}
-                  <div>
-                    <span className='text-[9px] tracking-[0.2em] text-white/30 transition-colors duration-300 group-hover:text-white/70'>
-                      {item.number}
-                    </span>
-                  </div>
+                  {/* SUBTLE HOVER CIRCLE */}
+                  <div
+                    className='
+                      pointer-events-none
+                      absolute
+                      -right-12
+                      -top-12
+                      size-28
+                      rounded-full
+                      bg-black/[0.025]
+                      transition-transform
+                      duration-700
+                      group-hover:scale-[2]
+                    '
+                  />
 
-                  {/* PROJECT DETAILS */}
-                  <div>
-                    <h3 className='text-[15px] uppercase leading-[1.1] tracking-[-0.01em] text-white md:text-base'>
+                  <div className='relative'>
+                    {/* TOP ROW */}
+                    <div className='flex items-center justify-between'>
+                      {/* PROJECT NUMBER */}
+                      <span
+                        className='
+                          text-[9px]
+                          tracking-[0.2em]
+                          text-black/30
+                          transition-colors
+                          duration-300
+                          group-hover:text-black/60
+                        '
+                      >
+                        {item.number}
+                      </span>
+
+                      {/* PROJECT LABEL */}
+                      <span
+                        className='
+                          text-[8px]
+                          uppercase
+                          tracking-[0.2em]
+                          text-black/25
+                          transition-colors
+                          duration-300
+                          group-hover:text-black/50
+                        '
+                      >
+                        Selected Project
+                      </span>
+                    </div>
+
+                    {/* TITLE */}
+                    <h3
+                      className='
+                        mt-6
+                        text-base
+                        uppercase
+                        leading-tight
+                        tracking-[-0.015em]
+                        text-black
+                        md:text-[17px]
+                      '
+                    >
                       {item.title}
                     </h3>
 
-                    <p className='mt-3 max-w-md text-[11px] leading-[1.75] text-white/45 md:text-xs'>
+                    {/* DESCRIPTION */}
+                    <p
+                      className='
+                        mt-3
+                        max-w-md
+                        text-[11px]
+                        leading-[1.75]
+                        text-black/45
+                        md:text-xs
+                      '
+                    >
                       {item.description}
                     </p>
-
-                    {/* PROJECT INDICATOR */}
-                    <div className='mt-5 flex items-center gap-2'>
-                      <span className='text-[7px] uppercase tracking-[0.2em] text-white/25 transition-colors duration-300 group-hover:text-white/50'>
-                        Project {item.number}
-                      </span>
-                    </div>
                   </div>
                 </motion.div>
               ))}

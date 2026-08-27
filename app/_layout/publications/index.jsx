@@ -48,9 +48,10 @@ export function Publications() {
                 aspect-[4/5]
                 w-full
                 overflow-hidden
+                rounded-2xl
                 bg-black/[0.03]
                 md:aspect-[5/6]
-                lg:aspect-[4/5]
+                lg:aspect-[5/4.8]
               '
             >
               <img
@@ -94,9 +95,12 @@ export function Publications() {
             </ParallaxFade>
 
             <ParallaxFade>
+              {/* Added vertical padding to prevent ParallaxReveal cropping */}
               <h2
                 className='
                   max-w-3xl
+                  overflow-visible
+                  py-2
                   text-[clamp(3rem,5vw,4rem)]
                   uppercase
                   leading-[0.94]
@@ -142,7 +146,7 @@ export function Publications() {
                   <h3
                     className='
                       max-w-2xl
-                      text-[clamp(1rem,1.5vw,1.3rem)]
+                      text-[clamp(0.9rem,1.25vw,1.1rem)]
                       leading-[1.2]
                       tracking-[-0.015em]
                       text-black
